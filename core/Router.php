@@ -1,43 +1,45 @@
 <?php
 /**
- * Permet de rediriger l'utilisateur selon une adresse personnalisée
+ * Permet de rediriger un user selon une adresse personnalisé
+ *
  */
-class Router {
 
+ class Router{
 
-    public function dispatch(string $uri = '/') {
+    public function dispatch(string $uri = '/'){
+        //var_dump("Mon uri : $uri");
 
-        //var_dump("Mon URI est : $uri");
+        /**
+         * on enregistre la position du pint d'interrogation si celui-ci existe
+         */
+        $position = strpos($uri,'?');
+        // si position est egal a false, alors on nettoie l'uri
+        if($position){
 
-        //On enregistre la position du point d'interogation si celui-ci existe
-        $position = strpos($uri, '?');
-
-        // Si $position est égal à false, alors on nettoie l'URI
-        if ($position) {
-            // Ex : /mon/uri?id=12
-            // Le nettoyage rendra ceci : /mon/uri
-            $uri = substr($uri, 0, $position);
+            $uri = substr($uri,0,$position);
+         
         }
-        //var_dump($uri);
+ 
+   /**
+    * Si l'uri est differenter d'un simple slash
+    * "/" = page d'accueil
+    */
+        if($uri !== '/'){
+            // Recupere le dernier caractère de l'uri
 
-        // Si l'URI est différent d'un simple slash "/" et = page d'accueil
-        if ($uri !== '/') {
+            $lastChar= substr($uri,-1,iconv_strlen($uri));
+            //Si le dernier caractere est un slash
+            if($lastChar === "/"){
 
-            // Récupère le dernier caractère de l'URI
-            $lastChar = substr($uri, -1, iconv_strlen($uri));
+                $uri = substr($uri,0,iconv_strlen($uri)-1);
 
-            //var_dump($lastChar);
-
-            //Si le dernier caractère est un slash
-            if ($lastChar === '/') {
-                // Récupère la chaine sans le dernier caractaire
-                $uri = substr($uri, 0, iconv_strlen($uri) -1);
-                
-                //var_dump($uri);
             }
-        }
-        // Chargement des fichier de routes
+        } 
+        // chargement du fichier de configuration des routes
+
         require_once '../config/routes.php';
+
     }
-}
-?>
+ }
+
+
