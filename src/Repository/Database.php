@@ -7,7 +7,7 @@
 abstract class DataBase {
 
     //Où se situe la bas de donnée ? 
-    private const DB_HOST = 'localhos';
+    private const DB_HOST = 'localhost';
 
     // Nom utilisateur
     private const DB_USER = 'root';
