@@ -115,7 +115,7 @@ class Coffe{
   public function setPhotos($photos)
   {
     $this->photos = $photos;
-
+ 
     return $this;
   }
 
