@@ -1,13 +1,7 @@
 <?php
 
 class Coffe{
-    `id` int(11) NOT NULL,
-  `nom` varchar(55) NOT NULL,
-  `type` varchar(30) NOT NULL,
-  `profil_aromatique` varchar(150) NOT NULL,
-  `pays` varchar(150) NOT NULL,
-  `prix` int(11) NOT NULL,
-  `photos` text NOT NULL
+
 
   private int $id;
   private string $nom;
