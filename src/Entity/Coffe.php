@@ -1,6 +1,9 @@
 <?php
 
+
+
  class Coffe{
+
 
 
   private int $id;
@@ -9,6 +12,8 @@
   private string $pays;
   private string $photos;
   private string $profil_aromatique;
+
+
 
 
 
@@ -26,7 +31,9 @@
    *
    * @return  self
    */ 
+
   public function setId(int $id)
+
   {
     $this->id = $id;
 
@@ -46,7 +53,11 @@
    *
    * @return  self
    */ 
+
+
+
   public function setNom(string $nom)
+
   {
     $this->nom = $nom;
 
@@ -66,7 +77,10 @@
    *
    * @return  self
    */ 
+
+
   public function setType(string $type)
+
   {
     $this->type = $type;
 
@@ -86,7 +100,9 @@
    *
    * @return  self
    */ 
+
   public function setPays(string $pays)
+
   {
     $this->pays = $pays;
 
@@ -106,7 +122,9 @@
    *
    * @return  self
    */ 
+
   public function setPhotos(string $photos)
+
   {
     $this->photos = $photos;
  
@@ -126,7 +144,9 @@
   *
   * @return  self
   */ 
+
  public function setProfil_aromatique(string $profil_aromatique)
+
  {
   $this->profil_aromatique = $profil_aromatique;
 

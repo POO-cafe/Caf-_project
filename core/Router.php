@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Permet de rediriger un user selon une adresse personnalisé
  *

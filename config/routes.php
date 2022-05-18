@@ -1,5 +1,6 @@
 <?php
 
+
 require_once '../src/Controller/CoffeController.php';
 require_once '../src/Controller/ErreurContollerController.php';
 
@@ -58,3 +59,4 @@ switch ($uri) {
         $controller = new ErreurController();
         $controller->erreur404();
 }
+
