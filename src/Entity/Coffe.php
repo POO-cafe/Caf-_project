@@ -1,6 +1,6 @@
 <?php
 
-class Coffe{
+ class Coffe{
 
 
   private int $id;
@@ -8,7 +8,7 @@ class Coffe{
   private string $type;
   private string $pays;
   private string $photos;
- private string $profil_aromatique;
+  private string $profil_aromatique;
 
 
 
