@@ -22,13 +22,13 @@ switch ($uri) {
     case '/admin/robusta/edit':
         $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
-        //Selectionne tous les caffès qui ont pour type Robusta
+        //modifie un caffè qui ont pour type Robusta
         $controller->editRobusta();
         break;
     case '/admin/robusta/delete':
         $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
-        //Selectionne tous les caffès qui ont pour type Robusta
+        //delete un caffe type Robusta
         $controller->deleteRobusta();
         break;
 
@@ -44,13 +44,13 @@ switch ($uri) {
     case '/admin/arabica/edit':
         $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
-        //Selectionne tous les caffès qui ont pour type arabica
+        //modifie un  caffè qui ont pour type arabica
         $controller->editArabica();
         break;
     case '/admin/arabica/delete':
         $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
-        //Selectionne tous les caffès qui ont pour type arabica
+        //Supprime un caffe qui ont pour type arabica
         $controller->deleteArabica();
         break;
 
