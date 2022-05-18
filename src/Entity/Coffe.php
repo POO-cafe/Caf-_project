@@ -26,7 +26,7 @@ class Coffe{
    *
    * @return  self
    */ 
-  public function setId($id)
+  public function setId(int $id)
   {
     $this->id = $id;
 
@@ -46,7 +46,7 @@ class Coffe{
    *
    * @return  self
    */ 
-  public function setNom($nom)
+  public function setNom(string $nom)
   {
     $this->nom = $nom;
 
@@ -66,7 +66,7 @@ class Coffe{
    *
    * @return  self
    */ 
-  public function setType($type)
+  public function setType(string $type)
   {
     $this->type = $type;
 
@@ -86,7 +86,7 @@ class Coffe{
    *
    * @return  self
    */ 
-  public function setPays($pays)
+  public function setPays(string $pays)
   {
     $this->pays = $pays;
 
@@ -106,7 +106,7 @@ class Coffe{
    *
    * @return  self
    */ 
-  public function setPhotos($photos)
+  public function setPhotos(string $photos)
   {
     $this->photos = $photos;
  
@@ -126,7 +126,7 @@ class Coffe{
   *
   * @return  self
   */ 
- public function setProfil_aromatique($profil_aromatique)
+ public function setProfil_aromatique(string $profil_aromatique)
  {
   $this->profil_aromatique = $profil_aromatique;
 
