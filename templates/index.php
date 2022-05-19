@@ -13,22 +13,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark bg-dark">
-        <ul class="nav">
-            <li class="nav-item">
-                <a class="nav-link active link-light" aria-current="page" href="#">POO-coffe</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link link-light" href="#">HOME</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link link-light" href="#">Robusta</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link link-light" href="#">Arabica</a>
-            </li>
-        </ul>
-        </nav>
+        <?php echo require_once '../templates/layouts/header.php'?>
     </header>
     <main>
         <!---photo + lien + titre--->
@@ -45,8 +30,8 @@
         </section>
     </main>
     <footer>
-        <!---footer à centrer---->
-        <p>&copy; Copyright Café Grand Choix Tous droit réserver</p>
+        <!---footer---->
+        <?php echo require_once '../templates/layouts/footer.php'?>
     </footer>
 </body>
 

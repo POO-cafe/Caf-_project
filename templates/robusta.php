@@ -8,11 +8,7 @@
 </head>
 <body>
 <header>
-        <nav class="navbar navbar-expand-lg bg-dark">
-            <div class="container-md">
-                <a class="navbar-brand text-light h1" href="#">Café Grand Choix</a>
-            </div>
-        </nav>
+        <?php echo require_once 'templates/layouts/header.php'?>
     </header>
     <main>
         <!---photo + lien + titre--->
@@ -30,7 +26,7 @@
     </main>
     <footer>
         <!---footer à centrer---->
-        <p>&copy; Copyright Café Grand Choix Tous droit réserver</p>
+        <?php echo require_once 'templates/layouts/footer.php'?>
     </footer>
 </body>
 </html>
