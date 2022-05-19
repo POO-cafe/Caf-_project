@@ -20,10 +20,7 @@
         <?php require_once 'layouts/header.php'; ?>
         </header>
         <main>
-            <?php if($success){
-                echo "bite";
-            }
-            ?>
+           
 
             <section id="formsSection">
                 <div class="insertCoffeeForms">
