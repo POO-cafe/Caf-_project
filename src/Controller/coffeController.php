@@ -76,6 +76,7 @@ class CoffeController {
         $coffeRepository = new CoffeRepository();
         $success = $coffeRepository->remove($_GET['id']);
         
+        
          // Redirige l'utilisateur vers la route "/liste"
         header('Location: /arabica?delete='. $success);
     }
