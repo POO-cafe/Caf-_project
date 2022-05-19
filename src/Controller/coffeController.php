@@ -55,8 +55,8 @@ class CoffeController {
     public function selectAllRobusta() {
         
         $coffeRepository = new CoffeRepository();
-        $listAllRobusta = $coffeRepository->selectAll();
-       require_once __DIR__.'templates/layouts/robusta.php';
+        $listAllRobusta = $coffeRepository->selectAllRobusta();
+       require_once __DIR__.'../../../templates/robusta.php';
         
     }
     //Modification des produits robusta
@@ -93,7 +93,7 @@ class CoffeController {
          $success = $coffeRepository->remove($_GET['id']);
         
         
-         header('Location: /arabica?delete='. $success);
+         header('Location: /arabica?delete='. $success); 
     }
 //---------------------------------CAFES ARABICA-----------------------------------------------------
 
@@ -101,8 +101,8 @@ class CoffeController {
     public function selectAllArabica() {
    
         $coffeRepository = new CoffeRepository();
-        $listAllArabica = $coffeRepository->selectAll();
-       require_once __DIR__.'../../../templates/arabica.php';
+        $listAllArabica = $coffeRepository->selectAllArabica();
+        require_once __DIR__.'../../../templates/arabica.php';
     }
 
     //Modification des produits arabica

@@ -23,7 +23,7 @@ switch ($uri) {
         $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
         //Selectionne tous les caffès qui ont pour type arabica
-        $controller->selectAllarabica();
+        $controller->selectAllArabica();
         break;
 
     case '/add':
