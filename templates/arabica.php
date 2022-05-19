@@ -20,6 +20,7 @@
     <main>
         <!---photo + lien + titre--->
         <!---boucle img titre  contenu * 6--->
+
         <section>
             <h2>Titre</h2>
             <a href="#"><img src="" alt="café"></a>
