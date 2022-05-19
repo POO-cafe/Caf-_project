@@ -7,7 +7,7 @@ class CoffeRepository extends Database {
 
     public function selectAll ()
     {
-        $query = $this->getDb()->query('SELECT * FROM cafes');
+        $query = $this->getDb()->query('SELECT * FROM cafes WHERE id = :id ');
         $allCoffees = $query->fetchAll();
 
         foreach($allCoffees as $coffee){
