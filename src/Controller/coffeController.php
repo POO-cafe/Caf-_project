@@ -17,7 +17,7 @@ class CoffeController {
     }
 
 // Insertion d'un café avec condition pour le type du café 'arabica ou robusta'
-    public function insertCoffe() {
+    public function add() {
         
             if (!empty($_POST)) {
 
@@ -36,11 +36,17 @@ class CoffeController {
             $coffeRepository = new CoffeRepository();
             $success = $coffeRepository->add($entity);
             
+                // Verifier que le champs soit vide ou pas sinon envoyer les données
 
+                if (isset($_POST['nom']) && isset($_POST['type']) && isset($_POST['pays']) && isset($_POST['photos']) && isset($_POST['prix']) && isset($_POST['profil_aromatique'])) {
+
+                   var_dump($_POST);
+                    
+                } 
             
         }
 
-        require_once __DIR__.'../../../templates/index.php';
+        require_once __DIR__.'../../../templates/forms.php';
     }
 
 //---------------------------------CAFES ROBUSTA----------------------------------------------------
@@ -50,7 +56,7 @@ class CoffeController {
         
         $coffeRepository = new CoffeRepository();
         $listAllRobusta = $coffeRepository->selectAll();
-       require_once __DIR__.'../../../templates/robusta.php';
+       require_once __DIR__.'templates/layouts/robusta.php';
         
     }
     //Modification des produits robusta
@@ -82,7 +88,7 @@ class CoffeController {
 
    //Suppression des café robusta
     public function deleteRobusta() {
-   
+     
          $coffeRepository = new CoffeRepository();
          $success = $coffeRepository->remove($_GET['id']);
         
