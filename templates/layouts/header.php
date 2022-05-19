@@ -3,7 +3,7 @@
   <div class="container-fluid">
 
 
-        <a href="/" class="navbar-brand "><img src="images/logo.png" class="img_header " alt="logo">Coffe Break.</a>
+        <a href="/" class="navbar-brand "><img src="images/logo.png" class="img_header " alt="logo">Coffee Break.</a>
 
 
 
