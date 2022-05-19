@@ -20,13 +20,12 @@
 </header>
     <main>
       <dic class="container">
-          <div class="row mt-5">
-              <div class="col-lg-6 col-12  justify-content-end">
-                <a href="/arabica" class="align-items-lg-end"> <img class="img_index " src="images/arabica.png" alt="arabica"></a>
-              </div>
-              <div class="col-lg-6 col-12   justify-content-start pt-2">
-                <a href="/robusta" class=""><img  class="img_index  " src="images/robusta.png" alt="robusta"></a>
-              </div>
+          <div class="d-flex mt-5 justify-content-around">
+            
+                <a href="/arabica" class="m-0 text-end"><img class="img_index " src="images/arabica.jpg" alt="arabica"></a>
+              
+                <a href="/robusta" class="m-0"><img  class="img_index  " src="images/robusta.jpg" alt="robusta"></a>
+              
           </div>
       </dic>
     </main>

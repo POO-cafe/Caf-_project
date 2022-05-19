@@ -10,7 +10,10 @@
     height :  100px;
     width : 100px;
 }
-
+.img_index
+{
+  width: 100%!important;
+}
 
 #formSection
 {
