@@ -14,34 +14,34 @@
 <hearder>
 <?php require_once 'layouts/header.php';?>
 </header>
+    <main class="m-2">
+        <div class="row w-75 m-auto">
 
-    <main>
-        <!---photo + lien + titre--->
-        <!---boucle img titre  contenu *6--->
-        <?php foreach($listAllRobusta as $robusta):?> 
-            <?php
-            $chaine = "{$robusta['profil_aromatique']}";
-            $shortText = substr($chaine,0,100) . "..."; 
-            ?>
-            <section>
-                <div class="col-lg-6 col-md-12">
-                    <div class="card">
-                        <a href="#"><img src="<?php echo $robusta->getPhotos(); ?>" alt="café"></a>
-                        <h2><?php echo $robusta->getNom(); ?></h2>
-                    <div class="card--body">
-                        <p><?php echo $robusta->getPays(); ?></p>
-                        <p><?php echo $robusta->getPrix(); ?></p>
-                        <p><?php echo $robusta->getProfil_aromatique(); ?></p>
-                    </div>
+            <!---photo + lien + titre--->
+            <!---boucle img titre  contenu *6--->
+            <?php foreach($listAllRobusta as $robusta):?> 
+                <?php
+                $chaine = $robusta->getProfil_aromatique();
+                $shortText = substr($chaine,0,100) . "..."; 
+                ?>
+                <div class="col-lg-4 col-md-12 mb-1 p-1">
+                    <div class="card shadow p-3 mb-5 bg-body rounded">
+                            <a href="#"><img class="zoomImgCard card-img-top" src="img_products/<?= $robusta->getPhotos(); ?>" alt="café"></a>
+                            <h2 class="card-title"><?= $robusta->getNom(); ?></h2>
+                        <div class="card-body">
+                            <h3 class="card-title">Variété : <?=$robusta->getType(); ?></h3>
+                            <p class="card-text">Origine : <?= $robusta->getPays(); ?></p>
+                            <p class="card-text">Prix/kg : <?= $robusta->getPrix(); ?></p>
+                        </div>
                     </div>
                 </div>
-            </section>
-        <?php endforeach;?>
+                
+            <?php endforeach;?>
+        </div>
     </main>
     <footer>
         <?php require_once 'layouts/footer.php';?>
-    </footer>
-
+    </footer> 
 </body>
 </html>
 
