@@ -20,6 +20,8 @@
         <?php require_once 'layouts/header.php'; ?>
         </header>
         <main>
+           
+
             <section id="formsSection">
                 <div class="insertCoffeeForms">
                     <div class="split2 left2">
