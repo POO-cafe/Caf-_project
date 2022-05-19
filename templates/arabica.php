@@ -42,8 +42,7 @@
 
     </main>
     <footer>
-        <!---footer à centrer---->
-        <p>&copy; Copyright Café Grand Choix Tous droit réserver</p>
+        <?php require_once 'layouts/footer.php';?>
     </footer>
 </body>
 
