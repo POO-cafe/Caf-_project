@@ -59,6 +59,14 @@ class CoffeController
         $listAllRobusta = $coffeRepository->selectAllRobusta();
         require_once __DIR__ . '../../../templates/robusta.php';
     }
+    public function selectAllArabica()
+    
+    {
+        $coffeRepository = new CoffeRepository();
+
+        $listAllArabica = $coffeRepository->selectAllArabica();
+        require_once __DIR__ . '../../../templates/arabica.php';
+    }
 
 
     public function edit()
