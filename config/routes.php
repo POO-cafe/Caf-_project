@@ -44,12 +44,7 @@ switch ($uri) {
         //Selectionne tous les caffès qui ont pour type arabica
         $controller->delete();
         break;
-    case '/insert':
-        $controller = new CoffeController();
-        //Charge la methode corres^pondant a la vue souhaitée
-        //Selectionne tous les caffès qui ont pour type arabica
-        $controller->insert();
-        break;
+   
 
 
 
