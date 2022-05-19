@@ -56,7 +56,7 @@ class CoffeController {
         
         $coffeRepository = new CoffeRepository();
         $listAllRobusta = $coffeRepository->selectAll();
-       require_once __DIR__.'templates/layouts/robusta.php';
+       require_once __DIR__.'templates/robusta.php';
         
     }
     //Modification des produits robusta
