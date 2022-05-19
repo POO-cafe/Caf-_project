@@ -22,8 +22,8 @@ class CoffeController {
             if (!empty($_POST)) {
 
 
-            $entity = new Entity\Coffe();
-            $coffee->setContent(htmlspecialchars(strip_tags($_POST['cafes'])));
+            $entity = new Coffe();
+
             $name->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
             $type->setType(htmlspecialchars(strip_tags($_POST['type'])));
             $country->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
@@ -63,7 +63,7 @@ class CoffeController {
         $robusta->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
         $robusta->setPhotos(htmlspecialchars(strip_tags($_POST['photos'])));
         $robusta->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
-        $robusta->setProfil_aromatique($coffee['profil_aromatique']);
+        $robusta->setProfil_aromatique($_POST['profil_aromatique']);
 
         if (!empty($_POST)) {
             $robusta->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
@@ -71,7 +71,7 @@ class CoffeController {
             $robusta->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
             $robusta->setPhotos(htmlspecialchars(strip_tags($_POST['photos'])));
             $robusta->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
-            $robusta->setProfil_aromatique($coffee['profil_aromatique']);
+            $robusta->setProfil_aromatique($_POST['profil_aromatique']);
 
             $success = $coffeRepository->editRobusta($robusta);
        }
@@ -109,7 +109,7 @@ class CoffeController {
         $arabica->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
         $arabica->setPhotos(htmlspecialchars(strip_tags($_POST['photos'])));
         $arabica->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
-        $arabica->setProfil_aromatique($coffee['profil_aromatique']);
+        $arabica->setProfil_aromatique($_POST['profil_aromatique']);
 
         if (!empty($_POST)) {
             $arabica->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
@@ -117,7 +117,7 @@ class CoffeController {
             $arabica->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
             $arabica->setPhotos(htmlspecialchars(strip_tags($_POST['photos'])));
             $arabica->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
-            $arabica->setProfil_aromatique($coffee['profil_aromatique']);
+            $arabica->setProfil_aromatique($_POST['profil_aromatique']);
            
             $success = $coffeRepository->editArabica($arabica);
        }
