@@ -13,6 +13,7 @@
 .img_index
 {
   width: 100%!important;
+  border: 1px solid dimgrey;
 }
 
 #formSection
