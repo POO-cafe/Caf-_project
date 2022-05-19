@@ -1,7 +1,7 @@
 <?php
 
 require_once '../src/Controller/CoffeController.php';
-require_once '../src/Controller/ErreurContollerController.php';
+//require_once '../src/Controller/ErreurContollerController.php';
 
 
 switch ($uri) {
@@ -12,49 +12,49 @@ switch ($uri) {
         $controller->selectType();
         break;
 
-    case '/robusta':
-        $controller = new CoffeController();
+    // case '/robusta':
+    //     $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
         //Selectionne tous les caffès qui ont pour type Robusta
-        $controller->selectAllRobusta();
-        break;
+        // $controller->selectAllRobusta();
+        // break;
 
-    case '/admin/robusta/edit':
-        $controller = new CoffeController();
+    // case '/admin/robusta/edit':
+    //     $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
         //Selectionne tous les caffès qui ont pour type Robusta
-        $controller->editRobusta();
-        break;
-    case '/admin/robusta/delete':
-        $controller = new CoffeController();
+    //     $controller->editRobusta();
+    //     break;
+    // case '/admin/robusta/delete':
+        // $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
         //Selectionne tous les caffès qui ont pour type Robusta
-        $controller->deleteRobusta();
-        break;
+        // $controller->deleteRobusta();
+        // break;
 
 
 
-    case '/arabica':
-        $controller = new CoffeController();
+    // case '/arabica':
+    //     $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
         //Selectionne tous les caffès qui ont pour type arabica
-        $controller->selectAllarabica();
-        break;
+    //     $controller->selectAllarabica();
+    //     break;
 
-    case '/admin/arabica/edit':
-        $controller = new CoffeController();
+    // case '/admin/arabica/edit':
+    //     $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
         //Selectionne tous les caffès qui ont pour type arabica
-        $controller->editArabica();
-        break;
-    case '/admin/arabica/delete':
-        $controller = new CoffeController();
+    //     $controller->editArabica();
+    //     break;
+    // case '/admin/arabica/delete':
+    //     $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
         //Selectionne tous les caffès qui ont pour type arabica
-        $controller->deleteArabica();
-        break;
+//         $controller->deleteArabica();
+//         break;
 
-    default:
-        $controller = new ErreurController();
-        $controller->erreur404();
+//     default:
+//         $controller = new ErreurController();
+//         $controller->erreur404();
 }
