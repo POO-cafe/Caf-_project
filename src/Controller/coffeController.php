@@ -23,12 +23,13 @@ class CoffeController {
 
 
             $entity = new Coffe();
-
-            $name->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
-            $type->setType(htmlspecialchars(strip_tags($_POST['type'])));
-            $country->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
-            $picture->setPhotos(htmlspecialchars(strip_tags($_POST['photos'])));
-            $price->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
+            $entity->setId(htmlspecialchars(strip_tags($_POST['Id'])));
+            $entity->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
+            $entity->setType(htmlspecialchars(strip_tags($_POST['type'])));
+            $entity->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
+            $entity->setPhotos(htmlspecialchars(strip_tags($_POST['photos'])));
+            $entity->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
+            $entity->setProfil_aromatique(htmlspecialchars(strip_tags($_POST['profil_aromatique'])))
 
 
             // Insertion dans la BDD
