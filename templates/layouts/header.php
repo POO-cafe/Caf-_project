@@ -1,12 +1,24 @@
-<header>
-    <img src="logo.png" alt="logo">
-        <div class="col titlePosition">
-            <a href="#" title="Coffe Break" class="titleColor">Coffee Break.</a>
-        </div>
-    <nav class="my-3">
-        <ul class="justify-content-center">
-            <li class="nav-item">Arabica</li>
-            <li class="nav-item">Robusta</li>
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+
+
+        <a href="/" class="navbar-brand "><img src="images/logo.png" class="img_header " alt="logo">Coffe Break.</a>
+
+
+
+        <ul class="nav navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/arabica">Arabica</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/robusta">Robusta</a>
+            </li>
+
         </ul>
-    </nav>
-</header>
+  </div>
+</div>
+</nav>
