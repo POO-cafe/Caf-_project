@@ -81,7 +81,7 @@ class CoffeController {
 
    //Suppression des café robusta
     public function deleteRobusta() {
-   
+     
          $coffeRepository = new CoffeRepository();
          $success = $coffeRepository->remove($_GET['id']);
         
