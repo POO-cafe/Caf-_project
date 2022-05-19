@@ -19,6 +19,8 @@ switch ($uri) {
         //Selectionne tous les caffès qui ont pour type Robusta
         $controller->selectAllRobusta();
         break;
+    
+    
 
     case '/admin/robusta/edit':
         $controller = new CoffeController();

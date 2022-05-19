@@ -17,7 +17,7 @@ class CoffeController {
         
         $coffeRepository = new CoffeRepository();
         $listAllRobusta = $coffeRepository->selectAll();
-       require_once __DIR__.'../../../templates/robusta.php'
+       require_once __DIR__.'../../../templates/robusta.php';
         
     }
 
@@ -39,8 +39,8 @@ class CoffeController {
 
     public function deleteRobusta() {
    
-        $coffeRepository = new CoffeRepositor();
-         $success = $coffeRepository->remove($_GET['id']);
+        $coffeRepository = new CoffeRepository();
+        $success = $coffeRepository->remove($_GET['id']);
         
          // Redirige l'utilisateur vers la route "/liste"
         header('Location: /liste?delete='. $success);
@@ -52,7 +52,7 @@ class CoffeController {
    
         $coffeRepository = new CoffeRepository();
         $listAllArabica = $coffeRepository->selectAll();
-       require_once __DIR__.'../../../templates/arabica.php'
+       require_once __DIR__.'../../../templates/arabica.php';
     }
 
     public function editArabica() {
@@ -73,8 +73,8 @@ class CoffeController {
 
     public function deleteArabica() {
    
-        $coffeRepository = new CoffeRepositor();
-         $success = $coffeRepository->remove($_GET['id']);
+        $coffeRepository = new CoffeRepository();
+        $success = $coffeRepository->remove($_GET['id']);
         
          // Redirige l'utilisateur vers la route "/liste"
         header('Location: /arabica?delete='. $success);
