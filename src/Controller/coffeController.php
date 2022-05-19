@@ -23,31 +23,20 @@ class CoffeController {
 
 
             $entity = new Entity\Coffe();
-            $entity->setContent(htmlspecialchars(strip_tags($_POST['cafes'])));
-            $coffe->setProfil_aromatique(htmlspecialchars(strip_tags($_POST['id'])));
-            $coffe->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
-            $coffe->setType(htmlspecialchars(strip_tags($_POST['type'])));
-            $coffe->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
-            $coffe->setPhotos(htmlspecialchars(strip_tags($_POST['photos'])));
-            $coffe->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
+            $coffee->setContent(htmlspecialchars(strip_tags($_POST['cafes'])));
+            $name->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
+            $type->setType(htmlspecialchars(strip_tags($_POST['type'])));
+            $country->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
+            $picture->setPhotos(htmlspecialchars(strip_tags($_POST['photos'])));
+            $price->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
 
 
             // Insertion dans la BDD
             $coffeRepository = new CoffeRepository();
             $success = $coffeRepository->add($entity);
             
-            if (
-                !empty($title) 
-                && !empty($content) 
-                && !empty($category) 
-                && !empty($_FILES['cover']) 
-                && $_FILES['cover']['error'] === 0
-            )
 
-            if (($_POST['type'] != 'arabica' || $_POST['type']'robusta')) {
-                
-                return false
-            }
+            
         }
 
         require_once __DIR__.'../../../templates/index.php';
@@ -60,7 +49,7 @@ class CoffeController {
         
         $coffeRepository = new CoffeRepository();
         $listAllRobusta = $coffeRepository->selectAll();
-       require_once __DIR__.'../../../templates/robusta.php'
+       require_once __DIR__.'../../../templates/robusta.php';
         
     }
     //Modification des produits robusta
@@ -68,6 +57,13 @@ class CoffeController {
         
         $coffeRepository = new CoffeRepository();
         $robusta = $coffeRepository->edit($_GET['id']);
+
+        $robusta->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
+        $robusta->setType(htmlspecialchars(strip_tags($_POST['type'])));
+        $robusta->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
+        $robusta->setPhotos(htmlspecialchars(strip_tags($_POST['photos'])));
+        $robusta->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
+        $robusta->setProfil_aromatique($coffee['profil_aromatique']);
 
         if (!empty($_POST)) {
             $robusta->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
@@ -77,7 +73,6 @@ class CoffeController {
             $robusta->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
             $robusta->setProfil_aromatique($coffee['profil_aromatique']);
 
-           
             $success = $coffeRepository->editRobusta($robusta);
        }
         
@@ -87,7 +82,7 @@ class CoffeController {
    //Suppression des café robusta
     public function deleteRobusta() {
    
-         $coffeRepository = new CoffeRepositor();
+         $coffeRepository = new CoffeRepository();
          $success = $coffeRepository->remove($_GET['id']);
         
         
@@ -100,34 +95,40 @@ class CoffeController {
    
         $coffeRepository = new CoffeRepository();
         $listAllArabica = $coffeRepository->selectAll();
-       require_once __DIR__.'../../../templates/arabica.php'
+       require_once __DIR__.'../../../templates/arabica.php';
     }
 
     //Modification des produits arabica
     public function editArabica() {
    
         $coffeRepository = new CoffeRepository();
+        $arabica = $coffeRepository->edit($_GET['id']);
+
         $arabica->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
         $arabica->setType(htmlspecialchars(strip_tags($_POST['type'])));
         $arabica->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
         $arabica->setPhotos(htmlspecialchars(strip_tags($_POST['photos'])));
         $arabica->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
-        $arabica = $coffeRepository->editArabica($_GET['id']);
         $arabica->setProfil_aromatique($coffee['profil_aromatique']);
 
         if (!empty($_POST)) {
-            $arabica->setContent(htmlspecialchars(strip_tags($_POST['cafes'])));
+            $arabica->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
+            $arabica->setType(htmlspecialchars(strip_tags($_POST['type'])));
+            $arabica->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
+            $arabica->setPhotos(htmlspecialchars(strip_tags($_POST['photos'])));
+            $arabica->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
+            $arabica->setProfil_aromatique($coffee['profil_aromatique']);
            
-           $success = $coffeRepository->editArabica($arabica);
+            $success = $coffeRepository->editArabica($arabica);
        }
         
        require_once __DIR__.'../../../templates/arabica.php';
     }
 
-
+    //Suppression arabica
     public function deleteArabica() {
    
-        $coffeRepository = new CoffeRepositor();
+        $coffeRepository = new CoffeRepository();
          $success = $coffeRepository->remove($_GET['id']);
         
          // Redirige l'utilisateur vers la route "/liste"
