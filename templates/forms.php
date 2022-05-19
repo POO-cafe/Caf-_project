@@ -20,41 +20,55 @@
         <?php require_once 'layouts/header.php'; ?>
         </header>
         <main>
-            <form action="" method="post">
+            <section id="formsSection">
+                <div class="insertCoffeeForms">
+                    <div class="split2 left2">
+                    </div>
+                    <div class="split2 right2 ">
+                        <div class="row centered2 p-0">
+                            <div class="col middleForm">
+                            <h3>Ajout d'un café</h3>
+                                <form action="" method="post" >
 
-                <div class="mb-3">
-                    <label for="nom" class="form-label">Nom</label>
-                    <input type="text" name="nom" class="form-control" id="nom" placeholder="Nom">
+                                <div class="mb-3">
+                                    <label for="nom" class="form-label">Nom</label>
+                                    <input type="text" name="nom" class="form-control" id="nom" placeholder="Nom">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="type" class="form-label">Type</label>
+                                    <input type="text" name="type" class="form-control" id="type" placeholder="Arabica ou Robusta">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="pays" class="form-label">Pays</label>
+                                    <input type="text" name="pays" class="form-control" id="pays" placeholder="Pays">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="img" class="form-label">Photo</label>
+                                    <input class="form-control" name="img" type="file" id="img">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="prix" class="form-label">Prix</label>
+                                    <input type="text" name="prix" class="form-control" id="prix" placeholder="Prix">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="profil_aromatique" class="form-label">Profil aromatique</label>
+                                    <textarea class="form-control" name="profil_aromatique" id="profil_aromatique" rows="3"></textarea>
+                                </div>
+
+                                <button class="btn btn-seconday">Envoyer</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>        
                 </div>
-
-                <div class="mb-3">
-                    <label for="type" class="form-label">Type</label>
-                    <input type="text" name="type" class="form-control" id="type" placeholder="Arabica ou Robusta">
-                </div>
-
-                <div class="mb-3">
-                    <label for="pays" class="form-label">Pays</label>
-                    <input type="text" name="pays" class="form-control" id="pays" placeholder="Pays">
-                </div>
-
-                <div class="mb-3">
-                    <label for="img" class="form-label">Photo</label>
-                    <input class="form-control" name="img" type="file" id="img">
-                </div>
-
-                <div class="mb-3">
-                    <label for="prix" class="form-label">Prix</label>
-                    <input type="text" name="prix" class="form-control" id="prix" placeholder="Prix">
-                </div>
-
-                <div class="mb-3">
-                    <label for="profil_aromatique" class="form-label">Profil aromatique</label>
-                    <textarea class="form-control" name="profil_aromatique" id="profil_aromatique" rows="3"></textarea>
-                </div>
-
-                <button class="btn btn-primary">Envoyer</button>
-
-            </form>
+                
+            </section>
         </main>
 
 </body>
