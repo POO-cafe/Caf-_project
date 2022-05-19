@@ -1,44 +1,61 @@
 <?php
 
-require_once '../src/Controller/AvisController.php';
-require_once '../src/Controller/ErrorController.php';
-/**
- * Fichier de configuration des routes
- */
 
-switch($uri) {
-    // Accueil
+require_once '../src/Controller/CoffeController.php';
+require_once '../src/Controller/ErreurController.php';
+
+
+switch ($uri) {
+        //Accueil
     case '/':
-        $controller = new AvisController();
+        $controller = new CoffeController();
+        //Charge la methode correspondant a la vue souhaitée
+        $controller->selectType();
+        break;
 
-        //Charge la méthode correspondant à la vue souhaitée
+    case '/robusta':
+        $controller = new CoffeController();
+        //Charge la methode corres^pondant a la vue souhaitée
+        //Selectionne tous les caffès qui ont pour type Robusta
+        $controller->selectAllRobusta();
+        break;
+    case '/arabica':
+        $controller = new CoffeController();
+        //Charge la methode corres^pondant a la vue souhaitée
+        //Selectionne tous les caffès qui ont pour type arabica
+        $controller->selectAllarabica();
+        break;
+
+    case '/add':
+        $controller = new CoffeController();
+        //Charge la methode corres^pondant a la vue souhaitée
+        //Selectionne tous les caffès qui ont pour type arabica
+        $controller->add();
+        break;
+    case '/edit':
+        $controller = new CoffeController();
+        //Charge la methode corres^pondant a la vue souhaitée
+        //Selectionne tous les caffès qui ont pour type arabica
+        $controller->edit();
+        break;
+    case '/delete':
+        $controller = new CoffeController();
+        //Charge la methode corres^pondant a la vue souhaitée
+        //Selectionne tous les caffès qui ont pour type arabica
+        $controller->delete();
+        break;
+    case '/insert':
+        $controller = new CoffeController();
+        //Charge la methode corres^pondant a la vue souhaitée
+        //Selectionne tous les caffès qui ont pour type arabica
         $controller->insert();
         break;
 
-    case '/contact':
-        $controller = new AvisController();
-        $controller->contact();
-        break;
-        
-    case '/list':
-        $controller = new AvisController();
-        $controller->list();
-        break;
 
-    case '/delete/avis':
-        $controller = new AvisController();
-        $controller->delete();
-        break;
-    
-    case '/editer/avis':
-        $controller = new AvisController();
-        $controller->editer();
-        break;
-    
+
 
 
     default:
-        $controller = new ErrorController();
-        $controller->notFound();
-    
+        $controller = new ErreurController();
+        $controller->erreur404();
 }
