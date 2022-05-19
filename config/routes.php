@@ -19,24 +19,6 @@ switch ($uri) {
         //Selectionne tous les caffès qui ont pour type Robusta
         $controller->selectAllRobusta();
         break;
-    
-    
-
-    case '/admin/robusta/edit':
-        $controller = new CoffeController();
-        //Charge la methode corres^pondant a la vue souhaitée
-        //modifie un caffè qui ont pour type Robusta
-        $controller->editRobusta();
-        break;
-    case '/admin/robusta/delete':
-        $controller = new CoffeController();
-        //Charge la methode corres^pondant a la vue souhaitée
-        //delete un caffe type Robusta
-        $controller->deleteRobusta();
-        break;
-
-
-
     case '/arabica':
         $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
@@ -44,21 +26,36 @@ switch ($uri) {
         $controller->selectAllarabica();
         break;
 
-    case '/admin/arabica/edit':
+    case '/add':
         $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
-        //modifie un  caffè qui ont pour type arabica
-        $controller->editArabica();
+        //Selectionne tous les caffès qui ont pour type arabica
+        $controller->add();
         break;
-    case '/admin/arabica/delete':
+    case '/edit':
         $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
-        //Supprime un caffe qui ont pour type arabica
-        $controller->deleteArabica();
+        //Selectionne tous les caffès qui ont pour type arabica
+        $controller->edit();
         break;
+    case '/delete':
+        $controller = new CoffeController();
+        //Charge la methode corres^pondant a la vue souhaitée
+        //Selectionne tous les caffès qui ont pour type arabica
+        $controller->delete();
+        break;
+    case '/insert':
+        $controller = new CoffeController();
+        //Charge la methode corres^pondant a la vue souhaitée
+        //Selectionne tous les caffès qui ont pour type arabica
+        $controller->insert();
+        break;
+
+
+
+
 
     default:
         $controller = new ErreurController();
         $controller->erreur404();
 }
-
