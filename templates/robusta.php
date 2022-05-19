@@ -20,18 +20,24 @@
         <!---boucle img titre  contenu *6--->
         <?php foreach($listAllRobusta as $robusta):?> 
             <?php
-            $chaine = "{$robusta['profil_aromatique']}";
+            $chaine = $robusta->getProfil_aromatique();
             $shortText = substr($chaine,0,100) . "..."; 
             ?>
             <section>
                 <div class="col-lg-6 col-md-12">
                     <div class="card">
-                        <a href="#"><img src="<?php echo $robusta->getPhotos(); ?>" alt="café"></a>
-                        <h2><?php echo $robusta->getNom(); ?></h2>
+                        <a href="#"><img class="w-100" src="img_products/<?= $robusta->getPhotos(); ?>" alt="café"></a>
+                        <h2><?= $robusta->getNom(); ?></h2>
                     <div class="card--body">
-                        <p><?php echo $robusta->getPays(); ?></p>
-                        <p><?php echo $robusta->getPrix(); ?></p>
-                        <p><?php echo $robusta->getProfil_aromatique(); ?></p>
+                        <ul>
+                            <li><h3><?= $robusta->getType(); ?></h3></li>
+                            <li><p><?= $robusta->getPays(); ?></p></li>
+                            <li><p><?= $robusta->getPrix(); ?></p></li>
+                        </ul>
+                        
+                        
+                        
+                        
                     </div>
                     </div>
                 </div>
