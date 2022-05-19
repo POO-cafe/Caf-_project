@@ -17,26 +17,6 @@
 <hearder>
 <?php require_once 'layouts/header.php';?>
 </header>
-<<<<<<< HEAD
-    <main>
-        <!---photo + lien + titre--->
-        <!---boucle img titre  contenu * 6--->
-        <?php foreach($listAllArabica as $arabica):?> 
-            <?php
-            $chaine = $arabica->getProfil_aromatique();
-            $shortText = substr($chaine,0,100) . "..."; 
-            ?>
-            <section>
-                <div class="col-lg-6 col-md-12">
-                    <div class="card">
-                        <a href="#"><img src="photos_cafes/<?= $arabica->getPhotos(); ?>" alt="café"></a>
-                        <h2><?= $arabica->getNom(); ?></h2>
-                    <div class="card--body">
-                        <p><?= $arabica->getPays(); ?></p>
-                        <p><?= $arabica->getPrix(); ?></p>
-                        <p><?= $shortText ?></p>
-                    </div>
-=======
     <main class="m-2">
         <div class="row w-75 m-auto">
 
@@ -56,7 +36,6 @@
                             <p class="card-text">Origine : <?= $arabica->getPays(); ?></p>
                             <p class="card-text">Prix/kg : <?= $arabica->getPrix(); ?></p>
                         </div>
->>>>>>> 3711417a865a88cf6db8c66ab29d63c247bf15fe
                     </div>
                 </div>
                 
