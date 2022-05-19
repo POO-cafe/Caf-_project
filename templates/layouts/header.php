@@ -1,7 +1,7 @@
 <header>
     <img src="logo.png" alt="logo">
         <div class="col titlePosition">
-            <a href="#" title="Livres" class="titleColor">Coffee Break.</a>
+            <a href="#" title="Coffe Break" class="titleColor">Coffee Break.</a>
         </div>
     <nav class="my-3">
         <ul class="justify-content-center">
