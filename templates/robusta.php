@@ -39,9 +39,9 @@
         <?php endforeach;?>
     </main>
     <footer>
-        <!---footer à centrer---->
-        <?php echo require_once 'templates/layouts/footer.php'?>
+        <?php require_once 'layouts/footer.php';?>
     </footer>
+
 </body>
 </html>
 
