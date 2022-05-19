@@ -2,7 +2,7 @@
 
 
 require_once '../src/Controller/CoffeController.php';
-require_once '../src/Controller/ErreurContollerController.php';
+require_once '../src/Controller/ErreurController.php';
 
 
 switch ($uri) {
