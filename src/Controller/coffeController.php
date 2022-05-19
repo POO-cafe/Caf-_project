@@ -17,7 +17,7 @@ class CoffeController {
     }
 
 // Insertion d'un café avec condition pour le type du café 'arabica ou robusta'
-    public function insertCoffe() {
+    public function add() {
         
             if (!empty($_POST)) {
 
