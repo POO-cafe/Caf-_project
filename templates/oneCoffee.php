@@ -23,14 +23,19 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-5">
                     <img src="<?php echo $coffee->setPhotos(); ?>" alt="">
                 </div>
-                <div class="col-4">
+                <div class="col-7">
                 <h2><?php echo $coffee->setNom(); ?></h2>
-                </div>
-                <div class="col-4">
-                Column
+                <ul>
+                    <li><p>Variété</p><?php echo $coffee->setType(); ?></li>
+                    <li><p>Pays d'origine</p><?php echo $coffee->setPays(); ?></li>
+                    <li><p>Profil aromatique</p><?php echo $coffee->setProfil_aromatique(); ?></li>
+                    <li><p>Prix au kilo</p><?php echo $coffee->setPrix(); ?></li>
+                </ul>
+                    <a href="/delete/avis?id=<?php echo $coffee->getId(); ?>" class="btn btn-dark">Supprimer</a>
+                    <a href="/update/avis?id=<?php echo $coffee->getId(); ?>" class="btn btn-dark">Editer</a>
                 </div>
             </div>
         </div>
