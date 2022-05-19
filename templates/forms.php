@@ -20,6 +20,11 @@
         <?php require_once 'layouts/header.php'; ?>
         </header>
         <main>
+            <?php if($success){
+                echo "bite";
+            }
+            ?>
+
             <section id="formsSection">
                 <div class="insertCoffeeForms">
                     <div class="split2 left2">
@@ -28,7 +33,11 @@
                         <div class="row centered2 p-0">
                             <div class="col middleForm">
                             <h3>Ajout d'un café</h3>
-                                <form action="" method="post" >
+<<<<<<< HEAD
+                                <form  method="post" enctype="multipart/form-data" >
+=======
+                                <form action="" method="post" enctype="multipart/form-data">
+>>>>>>> 3711417a865a88cf6db8c66ab29d63c247bf15fe
 
                                 <div class="mb-3">
                                     <label for="nom" class="form-label">Nom</label>

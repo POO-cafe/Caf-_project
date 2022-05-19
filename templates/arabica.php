@@ -17,29 +17,51 @@
 <hearder>
 <?php require_once 'layouts/header.php';?>
 </header>
+<<<<<<< HEAD
     <main>
         <!---photo + lien + titre--->
         <!---boucle img titre  contenu * 6--->
         <?php foreach($listAllArabica as $arabica):?> 
             <?php
-            $chaine = "{$arabica['profil_aromatique']}";
+            $chaine = $arabica->getProfil_aromatique();
             $shortText = substr($chaine,0,100) . "..."; 
             ?>
             <section>
                 <div class="col-lg-6 col-md-12">
                     <div class="card">
-                        <a href="#"><img src="<?php echo $arabica->getPhotos(); ?>" alt="café"></a>
-                        <h2><?php echo $arabica->getNom(); ?></h2>
+                        <a href="#"><img src="photos_cafes/<?= $arabica->getPhotos(); ?>" alt="café"></a>
+                        <h2><?= $arabica->getNom(); ?></h2>
                     <div class="card--body">
-                        <p><?php echo $arabica->getPays(); ?></p>
-                        <p><?php echo $arabica->getPrix(); ?></p>
-                        <p><?php echo $arabica->getProfil_aromatique(); ?></p>
+                        <p><?= $arabica->getPays(); ?></p>
+                        <p><?= $arabica->getPrix(); ?></p>
+                        <p><?= $shortText ?></p>
                     </div>
+=======
+    <main class="m-2">
+        <div class="row w-75 m-auto">
+
+            <!---photo + lien + titre--->
+            <!---boucle img titre  contenu *6--->
+            <?php foreach($listAllArabica as $arabica):?> 
+                <?php
+                $chaine = $arabica->getProfil_aromatique();
+                $shortText = substr($chaine,0,100) . "..."; 
+                ?>
+                <div class="col-lg-4 col-md-12 mb-1 p-1">
+                    <div class="card shadow p-3 mb-5 bg-body rounded">
+                            <a href="#"><img class="zoomImgCard card-img-top" src="img_products/<?= $robusta->getPhotos(); ?>" alt="café"></a>
+                            <h2 class="card-title"><?= $arabica->getNom(); ?></h2>
+                        <div class="card-body">
+                            <h3 class="card-title">Variété : <?=$arabica->getType(); ?></h3>
+                            <p class="card-text">Origine : <?= $arabica->getPays(); ?></p>
+                            <p class="card-text">Prix/kg : <?= $arabica->getPrix(); ?></p>
+                        </div>
+>>>>>>> 3711417a865a88cf6db8c66ab29d63c247bf15fe
                     </div>
                 </div>
-            </section>
-        <?php endforeach;?>
-
+                
+            <?php endforeach;?>
+        </div>
     </main>
     <footer>
         <?php require_once 'layouts/footer.php';?>

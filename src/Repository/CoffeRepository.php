@@ -44,7 +44,7 @@ class CoffeRepository extends Database {
             $avisObject->setPays($coffee['pays']);
             $avisObject->setPhotos($coffee['photos']);
             $avisObject->setPrix($coffee['prix']);
-            $avisObject->setProfil_aromatique($coffee['profil_aromatique']);
+            $avisObject->setProfil_aromatique($coffee['profil_aromatique']); 
 
             
             $objects[] = $avisObject;
@@ -121,11 +121,11 @@ class CoffeRepository extends Database {
         return $avisObject ?? false;
        
     }
-    public function update(Coffe $coffee)
+    public function update(Coffe $coffee,int $id)
     {
         
         $query = $this->getDb()->prepare('UPDATE cafes SET nom = :nom, type = :type, pays = :pays, photos = :photos, prix = :prix, profil_aromatique = :profil_aromatique WHERE id = :id');
-        $query->bindValue(':id', $coffee->getId(), PDO::PARAM_INT);
+        $query->bindValue(':id', $id,PDO::PARAM_INT);
         $query->bindValue(':nom', $coffee->getNom());
         $query->bindValue(':type',$coffee->getType());
         $query->bindValue(':pays',$coffee->getPays());
