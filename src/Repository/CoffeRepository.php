@@ -44,7 +44,7 @@ class CoffeRepository extends Database {
             $avisObject->setPays($coffee['pays']);
             $avisObject->setPhotos($coffee['photos']);
             $avisObject->setPrix($coffee['prix']);
-            $avisObject->setProfil_aromatique($coffee['profil_aromatique']);
+            $avisObject->setProfil_aromatique($coffee['profil_aromatique']); 
 
             
             $objects[] = $avisObject;

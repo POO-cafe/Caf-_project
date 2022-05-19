@@ -19,15 +19,16 @@ class CoffeController {
 // Insertion d'un café avec condition pour le type du café 'arabica ou robusta'
     public function add() {
         
+        
             if (!empty($_POST)) {
 
 
             $entity = new Coffe();
-            $entity->setId(htmlspecialchars(strip_tags($_POST['Id'])));
+            
             $entity->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
             $entity->setType(htmlspecialchars(strip_tags($_POST['type'])));
             $entity->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
-            $entity->setPhotos(htmlspecialchars(strip_tags($_POST['photos'])));
+            $entity->setPhotos($_FILES['img']['name']);
             $entity->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
             $entity->setProfil_aromatique(htmlspecialchars(strip_tags($_POST['profil_aromatique'])));
 
@@ -38,11 +39,7 @@ class CoffeController {
             
                 // Verifier que le champs soit vide ou pas sinon envoyer les données
 
-                if (isset($_POST['nom']) && isset($_POST['type']) && isset($_POST['pays']) && isset($_POST['photos']) && isset($_POST['prix']) && isset($_POST['profil_aromatique'])) {
-
-                   var_dump($_POST);
-                    
-                } 
+              
             
         }
 
@@ -102,6 +99,7 @@ class CoffeController {
    
         $coffeRepository = new CoffeRepository();
         $listAllArabica = $coffeRepository->selectAllArabica();
+       
         require_once __DIR__.'../../../templates/arabica.php';
     }
 

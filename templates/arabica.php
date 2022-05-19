@@ -22,18 +22,18 @@
         <!---boucle img titre  contenu * 6--->
         <?php foreach($listAllArabica as $arabica):?> 
             <?php
-            $chaine = "{$arabica['profil_aromatique']}";
+            $chaine = $arabica->getProfil_aromatique();
             $shortText = substr($chaine,0,100) . "..."; 
             ?>
             <section>
                 <div class="col-lg-6 col-md-12">
                     <div class="card">
-                        <a href="#"><img src="<?php echo $arabica->getPhotos(); ?>" alt="café"></a>
-                        <h2><?php echo $arabica->getNom(); ?></h2>
+                        <a href="#"><img src="photos_cafes/<?= $arabica->getPhotos(); ?>" alt="café"></a>
+                        <h2><?= $arabica->getNom(); ?></h2>
                     <div class="card--body">
-                        <p><?php echo $arabica->getPays(); ?></p>
-                        <p><?php echo $arabica->getPrix(); ?></p>
-                        <p><?php echo $arabica->getProfil_aromatique(); ?></p>
+                        <p><?= $arabica->getPays(); ?></p>
+                        <p><?= $arabica->getPrix(); ?></p>
+                        <p><?= $shortText ?></p>
                     </div>
                     </div>
                 </div>
