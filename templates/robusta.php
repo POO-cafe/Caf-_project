@@ -18,16 +18,31 @@
     <main>
         <!---photo + lien + titre--->
         <!---boucle img titre  contenu *6--->
-        <section>
-            <h2>Titre</h2>
-            <a href="#"><img src="" alt="café"></a>
-            <p>Contenue</p>
-        </section>
-        <section>
-            <h2>Titre</h2>
-            <a href="#"><img src="" alt="café"></a>
-            <p>Contenue</p>
-        </section>
+        <?php foreach($listAllRobusta as $robusta):?> 
+            <?php
+            $chaine = $robusta->getProfil_aromatique();
+            $shortText = substr($chaine,0,100) . "..."; 
+            ?>
+            <section>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <a href="#"><img class="w-100" src="img_products/<?= $robusta->getPhotos(); ?>" alt="café"></a>
+                        <h2><?= $robusta->getNom(); ?></h2>
+                    <div class="card--body">
+                        <ul>
+                            <li><h3><?= $robusta->getType(); ?></h3></li>
+                            <li><p><?= $robusta->getPays(); ?></p></li>
+                            <li><p><?= $robusta->getPrix(); ?></p></li>
+                        </ul>
+                        
+                        
+                        
+                        
+                    </div>
+                    </div>
+                </div>
+            </section>
+        <?php endforeach;?>
     </main>
     <footer>
         <?php require_once 'layouts/footer.php';?>
@@ -35,3 +50,7 @@
 
 </body>
 </html>
+
+
+
+

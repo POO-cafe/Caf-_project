@@ -18,21 +18,16 @@
     <hearder>
 <?php require_once 'layouts/header.php';?>
 </header>
-
-
     <main>
-        <!---photo + lien + titre--->
-        <!---boucle img titre  contenu *2--->
-        <section>
-            <h2>Titre</h2>
-            <a href="#"><img src="" alt="café"></a>
-            <p>Contenue</p>
-        </section>
-        <section>
-            <h2>Titre</h2>
-            <a href="#"><img src="" alt="café"></a>
-            <p>Contenue</p>
-        </section>
+      <dic class="container">
+          <div class="d-flex mt-5 justify-content-around">
+            
+                <a href="/arabica" class=" text-end m-0"><img class="img_index " src="images/arabica.jpg" alt="arabica"></a>
+              
+                <a href="/robusta" class="m-0"><img  class="img_index " src="images/robusta.jpg" alt="robusta"></a>
+              
+          </div>
+      </dic>
     </main>
 </body>
 <footer>

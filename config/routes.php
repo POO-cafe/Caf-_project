@@ -46,10 +46,6 @@ switch ($uri) {
         break;
    
 
-
-
-
-
     default:
         $controller = new ErreurController();
         $controller->erreur404();

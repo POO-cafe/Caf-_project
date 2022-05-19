@@ -60,7 +60,7 @@
                                     <textarea class="form-control" name="profil_aromatique" id="profil_aromatique" rows="3"></textarea>
                                 </div>
 
-                                <button class="btn btn-primary">Envoyer</button>
+                                <button class="btn btn-seconday">Envoyer</button>
 
                                 </form>
                             </div>
