@@ -1,7 +1,5 @@
 <?php
 
-
-
  class Coffe{
 
 
@@ -12,9 +10,6 @@
   private string $pays;
   private string $photos;
   private string $profil_aromatique;
-
-
-
 
 
 
