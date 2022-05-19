@@ -13,14 +13,26 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-dark">
-            <div class="container-md">
-                <a class="navbar-brand text-light h1" href="#">Café Grand Choix</a>
-            </div>
+        <nav class="navbar navbar-dark bg-dark">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active link-light" aria-current="page" href="#">POO-coffe</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light" href="#">Robusta</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light" href="#">Arabica</a>
+            </li>
+        </ul>
         </nav>
     </header>
     <main>
         <!---photo + lien + titre--->
+        <!---boucle img titre  contenu *2--->
         <section>
             <h2>Titre</h2>
             <a href="#"><img src="" alt="café"></a>
@@ -33,7 +45,8 @@
         </section>
     </main>
     <footer>
-        <p>&copy; Copyright  Tous droit réserver</p>
+        <!---footer à centrer---->
+        <p>&copy; Copyright Café Grand Choix Tous droit réserver</p>
     </footer>
 </body>
 
