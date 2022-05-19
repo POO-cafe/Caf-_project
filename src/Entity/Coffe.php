@@ -10,6 +10,7 @@
   private string $pays;
   private string $photos;
   private string $profil_aromatique;
+  private string $prix;
 
 
 
@@ -147,4 +148,24 @@
 
   return $this;
  }
+
+  /**
+   * Get the value of prix
+   */ 
+  public function getPrix()
+  {
+    return $this->prix;
+  }
+
+  /**
+   * Set the value of prix
+   *
+   * @return  self
+   */ 
+  public function setPrix($prix)
+  {
+    $this->prix = $prix;
+
+    return $this;
+  }
 }
