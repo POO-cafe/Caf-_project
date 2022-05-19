@@ -14,6 +14,7 @@
 <hearder>
 <?php require_once 'layouts/header.php';?>
 </header>
+
     <main>
         <!---photo + lien + titre--->
         <!---boucle img titre  contenu *6--->
@@ -30,7 +31,7 @@
     </main>
     <footer>
         <!---footer à centrer---->
-        <p>&copy; Copyright Café Grand Choix Tous droit réserver</p>
+        <?php echo require_once 'templates/layouts/footer.php'?>
     </footer>
 </body>
 </html>

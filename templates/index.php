@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <hearder>
 <?php require_once 'layouts/header.php';?>
 </header>
@@ -33,7 +34,6 @@
             <p>Contenue</p>
         </section>
     </main>
-
 </body>
 <footer>
 <?php require_once 'layouts/footer.php';?>
