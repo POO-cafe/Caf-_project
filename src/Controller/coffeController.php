@@ -40,7 +40,7 @@ class CoffeController {
             
         }
 
-        require_once __DIR__.'../../../templates/index.php';
+        require_once __DIR__.'../../../templates/forms.php';
     }
 
 //---------------------------------CAFES ROBUSTA----------------------------------------------------
