@@ -19,6 +19,12 @@ switch ($uri) {
         //Selectionne tous les caffès qui ont pour type Robusta
         $controller->selectAllRobusta();
         break;
+    case '/arabica':
+        $controller = new CoffeController();
+        //Charge la methode corres^pondant a la vue souhaitée
+        //Selectionne tous les caffès qui ont pour type arabica
+        $controller->selectAllarabica();
+        break;
 
     case '/add':
         $controller = new CoffeController();
@@ -38,20 +44,18 @@ switch ($uri) {
         //Selectionne tous les caffès qui ont pour type arabica
         $controller->delete();
         break;
-
-    case '/arabica':
+    case '/insert':
         $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
         //Selectionne tous les caffès qui ont pour type arabica
-        $controller->selectAllarabica();
+        $controller->insert();
         break;
 
-   
+
+
+
 
     default:
         $controller = new ErreurController();
         $controller->erreur404();
-
-
 }
-
