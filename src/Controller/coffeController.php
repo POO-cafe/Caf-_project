@@ -36,7 +36,13 @@ class CoffeController {
             $coffeRepository = new CoffeRepository();
             $success = $coffeRepository->add($entity);
             
+                // Verifier que le champs soit vide ou pas sinon envoyer les données
 
+                if (isset($_POST['nom']) && isset($_POST['type']) && isset($_POST['pays']) && isset($_POST['photos']) && isset($_POST['prix']) && isset($_POST['profil_aromatique'])) {
+
+                   var_dump($_POST);
+                    
+                } 
             
         }
 
