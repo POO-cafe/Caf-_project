@@ -45,13 +45,14 @@ switch ($uri) {
         $controller->delete();
         break;
 
+        //Selectionne un caffès
     case '/oneCoffee':
         $controller = new CoffeController();
         $controller->selectId();
         break;
 
 
-
+        //Erreur 404
     default:
         $controller = new ErreurController();
         $controller->erreur404();
