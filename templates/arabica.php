@@ -22,7 +22,7 @@
 
             <!---photo + lien + titre--->
             <!---boucle img titre  contenu *6--->
-            <?php foreach($listAllArabica    as $arabica):?> 
+            <?php foreach($listAllArabica as $arabica):?> 
                 <?php
                 $chaine = $arabica->getProfil_aromatique();
                 $shortText = substr($chaine,0,100) . "..."; 
