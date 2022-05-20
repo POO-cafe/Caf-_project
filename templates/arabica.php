@@ -29,16 +29,14 @@
                 ?>
                 <div class="col-lg-4 col-md-12 mb-1 p-1">
                     <div class="card shadow p-3 mb-5 bg-body rounded">
-<<<<<<< HEAD
+
                             <a href="#"><img class="zoomImgCard card-img-top" src="img_products/<?= $arabica->getPhotos(); ?>" alt="café"></a>
 
-=======
-<<<<<<< HEAD
+
                             <a href="oneCoffee?id=<?= $arabica->getID()?>"><img class="zoomImgCard card-img-top" src="img_products/<?= $arabica->getPhotos(); ?>" alt="café"></a>
-=======
+
                             <a href="oneCoffee?=id<?php echo $arabica->selectId();?>"><img class="zoomImgCard card-img-top" src="img_products/<?= $arabica->getPhotos(); ?>" alt="café"></a>
->>>>>>> 9f64be8c7d00ed4515c83ec12b7badaaf39072e7
->>>>>>> 3bcd7f05e718ebfd55bf6f2316823d417eef20d7
+
                             <h2 class="card-title"><?= $arabica->getNom(); ?></h2>
                         <div class="card-body">
                             <h3 class="card-title">Variété : <?=$arabica->getType(); ?></h3>
@@ -51,9 +49,9 @@
             <?php endforeach;?>
         </div>
     </main>
-    <footer>
+   
         <?php require_once 'layouts/footer.php';?>
-    </footer>
+   
 </body>
 
 </html>
