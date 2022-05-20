@@ -29,12 +29,7 @@
                 <div class="col-lg-4 col-md-12 mb-1 p-1">
                     <div class="card shadow p-3 mb-5 bg-body rounded">
 
-<<<<<<< HEAD
                             <a href="oneCoffee?id=<?= $arabica->getID()?>"><img class="zoomImgCard card-img-top" src="img_products/<?= $arabica->getPhotos(); ?>" alt="café"></a>
-=======
-                            <a href="oneCoffee?id=<?= $arabica->getId() ?>"><img class="zoomImgCard card-img-top" src="img_products/<?= $arabica->getPhotos(); ?>" alt="café"></a>
-
->>>>>>> 33f171c63c7054e196f2f01b8a385c5de1731275
 
                             <h2 class="card-title"><?= $arabica->getNom(); ?></h2>
                         <div class="card-body">
