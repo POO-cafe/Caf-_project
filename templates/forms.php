@@ -54,15 +54,15 @@
                                     <option value=a>Selectionnez l'origine du café</option>
                                     <option value=Bresil>Bresil</option>
                                     <option value=Burundi>Burundi</option>
-                                    <option value=d>Colombie</option>
-                                    <option value=e>Costa Rica</option>
-                                    <option value=f>Ethiopie</option>
-                                    <option value=g>Italie</option>
-                                    <option value=h>Nicaragua</option>
-                                    <option value=i>Mexique</option>
-                                    <option value=j>Perou</option>
-                                    <option value=k>Turquie</option>
-                                    <option value=l>Espagne</option>
+                                    <option value=Colombie>Colombie</option>
+                                    <option value=Costa_Rica>Costa Rica</option>
+                                    <option value=Ethiopie>Ethiopie</option>
+                                    <option value=Italie>Italie</option>
+                                    <option value=Nicaragua>Nicaragua</option>
+                                    <option value=Mexique>Mexique</option>
+                                    <option value=Perou>Perou</option>
+                                    <option value=Turquie>Turquie</option>
+                                    <option value=Espagne>Espagne</option>
                                     </select>
                                 </div>
 
