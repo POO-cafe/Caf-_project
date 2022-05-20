@@ -20,11 +20,11 @@ class CoffeController
     }
 
     // Insertion d'un café avec condition pour le type du café 'arabica ou robusta'
-    public function add()
+    public function add(){
     {
 
-
         if (!empty($_POST)) {
+
 
             $uploadService = new UploadService;
             $file = $uploadService->upload($_FILES['img']['name']);
@@ -48,10 +48,17 @@ class CoffeController
 
             }
 
-                
-            }
 
+
+                
+                
+
+
+                
         }
+
+
+    }
 
         require_once __DIR__ . '../../../templates/forms.php';
     }
