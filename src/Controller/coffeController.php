@@ -79,24 +79,17 @@ class CoffeController
 
             $entity = new Coffe();
 
-            $entity->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
-            $entity->setType(htmlspecialchars(strip_tags($_POST['type'])));
-            $entity->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
+            $entity->setNom(htmlspecialchars(strip_tags(strtolower($_POST['nom']))));
+            $entity->setType(htmlspecialchars(strip_tags(strtolower($_POST['type']))));
+            $entity->setPays(htmlspecialchars(strip_tags(strtolower($_POST['pays']))));
             $entity->setPhotos($_FILES['img']['name']);
-            $entity->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
-            $entity->setProfil_aromatique(htmlspecialchars(strip_tags($_POST['profil_aromatique'])));
+            $entity->setPrix(htmlspecialchars(strip_tags(strtolower($_POST['prix']))));
+            $entity->setProfil_aromatique(htmlspecialchars(strip_tags(strtolower($_POST['profil_aromatique']))));
 
 
             // Insertion dans la BDD
 
-<<<<<<< HEAD
             $success = $coffeRepository->update($entity, $id);
-=======
-
-            $success = $coffeRepository->update($entity, $id);
-
-
->>>>>>> a059dd8d135b7203ce0360eb9455d9fa3ad0bde6
             // Verifier que le champs soit vide ou pas sinon envoyer les données
 
         }
@@ -122,7 +115,7 @@ class CoffeController
         $deleteObject = $coffeRepository->remove($_GET['id']);
         
         //Redirige l'utilisateur vers la route "/liste"
-        var_dump($deleteObject);
+        header('Location: /');
     }
 
 

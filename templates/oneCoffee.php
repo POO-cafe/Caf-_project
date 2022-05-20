@@ -35,11 +35,7 @@
                     <li>Prix au kilo : <?= $coffeeObject->getPrix(); ?></li>
                 </ul>
                     <a href="/delete?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Supprimer</a>
-<<<<<<< HEAD
-                    <a href="/update/avis?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Editer</a>
-=======
                     <a href="/edit?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Editer</a>
->>>>>>> 33f171c63c7054e196f2f01b8a385c5de1731275
                 </div>
             </div>
         </div>
