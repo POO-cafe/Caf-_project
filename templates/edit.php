@@ -30,15 +30,9 @@
                                 <h3>Modification d'un café</h3>
                                  <form action="" method="post" enctype="multipart/form-data">
 
-<<<<<<< HEAD
-                                <div class="mb-3">
-                                    <label for="nom" class="form-label">Nom</label>
-                                    <input type="text" name="nom" class="form-control" id="nom" placeholder="<?= $coffeeObject->getNom()?>">
-=======
                                 <div class="mb-3 ">
                                     <label for="nom" class="form-label ">Nom</label>
                                     <input type="text" name="nom" class="form-control" id="nom" placeholder="Nom">
->>>>>>> 5edc22be272c2394ecba9086bf3f4e5b77842ec1
                                 </div>
 
                                 <div class="mb-3">

@@ -10,8 +10,8 @@
     width: 180px;
     border: 6px solid #efb54a;
     position: absolute;
-    top: 40%;
-    left: 40%;
+    top: 50%;
+    left: 45%;
     border-radius: 0px 0px 70px 70px;
     background: url('../cup/coffee.png');
     box-shadow: 0px 0px 0px 6px white;
@@ -43,7 +43,10 @@
     background-color: transparent;
     border: 6px solid white;
     position: relative;
-    left: 186px;
-    top: 2px;
+    left: 126px;
+    top: -5px;
     border-radius: 0px 25px 80px 0px;
+}
+.error {
+    font-size: 80px;
 }
