@@ -94,10 +94,10 @@ class CoffeController
             // Verifier que le champs soit vide ou pas sinon envoyer les données
 
         }
-            $coffeRepository->selectId($id);
+            $coffee= $coffeRepository->selectId($id);
 
 
-        require_once '../../../templates/edit.php';
+        require_once __DIR__.'../../../templates/edit.php';
     }
 
     public function selectId(){
@@ -109,5 +109,7 @@ class CoffeController
 
         require_once __DIR__.'../../../templates/oneCoffee.php';
     }
+
+
 
 }
