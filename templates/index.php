@@ -19,7 +19,7 @@
 <?php require_once 'layouts/header.php';?>
 </header>
     <main>
-      <dic class="container">
+      <div class="container h-100">
           <div class="d-flex mt-5 justify-content-around">
             
                 <a href="/arabica" class=" text-end m-0"><img class="img_index " src="images/arabica.jpg" alt="arabica"></a>
@@ -27,7 +27,7 @@
                 <a href="/robusta" class="m-0"><img  class="img_index " src="images/robusta.jpg" alt="robusta"></a>
               
           </div>
-      </dic>
+      </div>
     </main>
 </body>
 <footer>
