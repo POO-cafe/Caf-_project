@@ -89,12 +89,10 @@ class CoffeController
 
             // Insertion dans la BDD
 
-<<<<<<< HEAD
-            $success = $coffeRepository->add($entity, $id);
-=======
+
             $success = $coffeRepository->update($entity, $id);
 
->>>>>>> 33f171c63c7054e196f2f01b8a385c5de1731275
+
             // Verifier que le champs soit vide ou pas sinon envoyer les données
 
         }
