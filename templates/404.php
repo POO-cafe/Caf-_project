@@ -29,5 +29,6 @@
         </main>
     
 </body>
+    <?php require_once 'layouts/footer.php'; ?>
 
 </html>
