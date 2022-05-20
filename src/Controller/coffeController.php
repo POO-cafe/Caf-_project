@@ -22,17 +22,10 @@ class CoffeController
     // Insertion d'un café avec condition pour le type du café 'arabica ou robusta'
     public function add()
     {
-<<<<<<< HEAD
-
-=======
->>>>>>> 6723dba898209a799d7f6f7c5dea7edb4a6c8224
 
 
-<<<<<<< HEAD
-=======
         if (!empty($_POST)) {
 
->>>>>>> 78f66090bd49d36a2bab238325cd6f64d19d3c78
             $uploadService = new UploadService;
             $file = $uploadService->upload($_FILES['img']['name']);
             $entity = new Coffe();
@@ -52,19 +45,12 @@ class CoffeController
                 // Insertion dans la BDD
                 $coffeRepository = new CoffeRepository();
                 $success = $coffeRepository->add($entity);
-<<<<<<< HEAD
-            }
-=======
 
-<<<<<<< HEAD
-                
-                
-=======
->>>>>>> 78f66090bd49d36a2bab238325cd6f64d19d3c78
+            }
+
                 
             }
 
->>>>>>> 6723dba898209a799d7f6f7c5dea7edb4a6c8224
         }
 
         require_once __DIR__ . '../../../templates/forms.php';

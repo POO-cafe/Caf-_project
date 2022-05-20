@@ -26,7 +26,7 @@
                     </div>
                     <div class="split2 right2 ">
                         <div class="row centered2 p-0 ">
-                            <div class="col middleForm">
+                            <div class="col middleForm text-white">
                                 <h3>Modification d'un café</h3>
                                  <form action="" method="post" enctype="multipart/form-data">
 
