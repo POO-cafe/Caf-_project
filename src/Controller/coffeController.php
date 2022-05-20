@@ -64,7 +64,7 @@ class CoffeController
         $coffeRepository = new CoffeRepository();
 
         $listAllArabica = $coffeRepository->selectAllArabica();
-        require_once __DIR__ . '../../../templates/arabica.php';
+        require_once __DIR__ . '../../../templates/arabica.php'; 
     }
 
 

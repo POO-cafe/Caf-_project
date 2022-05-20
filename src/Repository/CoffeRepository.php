@@ -17,7 +17,7 @@ class CoffeRepository extends Database {
             $avisObject->setNom($coffee['nom']);
             $avisObject->setType($coffee['type']);
             $avisObject->setPays($coffee['pays']);
-            $avisObject->setPhotos($coffee['photos']);
+            $avisObject->setPhotos($coffee['photos']); 
             $avisObject->setPrix($coffee['prix']);
             $avisObject->setProfil_aromatique($coffee['profil_aromatique']);
 
