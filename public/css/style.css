@@ -34,6 +34,9 @@ body{
   height: 500px;
   object-fit: cover;
 }
+.zoomImgCard:hover{
+  cursor : url('../images/coffee-bean_icon-icons.com_61176.png.'),pointer;
+}
 
 /*Page index*/
 
@@ -51,6 +54,13 @@ body{
 .sizeTitleNav {
   font-size: 1.2em;
 }
+
+.sizeTitleNav:hover{
+
+  cursor : url('../images/coffee-bean_icon-icons.com_61176.png.'),pointer;
+
+}
+
 .img_index
 {
   width: 100%!important;
