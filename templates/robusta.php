@@ -26,7 +26,7 @@
                 ?>
                 <div class="col-lg-4 col-md-12 mb-1 p-1">
                     <div class="card shadow p-3 mb-5 bg-body rounded">
-                            <a href="#"><img class="zoomImgCard card-img-top" src="img_products/<?= $robusta->getPhotos(); ?>" alt="café"></a>
+                            <a href="oneCoffee?id=<?= $robusta->getId() ?>"><img class="zoomImgCard card-img-top" src="img_products/<?= $robusta->getPhotos(); ?>" alt="café"></a>
                             <h2 class="card-title"><?= $robusta->getNom(); ?></h2>
                         <div class="card-body">
                             <h3 class="card-title">Variété : <?=$robusta->getType(); ?></h3>
@@ -39,9 +39,9 @@
             <?php endforeach;?>
         </div>
     </main>
-    <footer>
+   
         <?php require_once 'layouts/footer.php';?>
-    </footer> 
+    
 </body>
 </html>
 

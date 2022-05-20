@@ -27,36 +27,36 @@
                     <div class="split2 right2 ">
                         <div class="row centered2 p-0">
                             <div class="col middleForm">
-                            <h3>Ajout d'un café</h3>
-                                <form action="" method="post" enctype="multipart/form-data">
+                            <h3>Modification d'un café</h3>
+                                <form  method="post" enctype="multipart/form-data">
 
                                 <div class="mb-3">
-                                    <label for="nom" class="form-label"><?php echo $coffe->getNom() ?></label>
+                                    <label for="nom" class="form-label"><?php echo $coffee->getNom() ?></label>
                                     <input type="text" name="nom" class="form-control" id="nom" placeholder="Nom">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="type" class="form-label"><?php echo $coffe->getType() ?></label>
+                                    <label for="type" class="form-label"><?php echo $coffee->getType() ?></label>
                                     <input type="text" name="type" class="form-control" id="type" placeholder="Arabica ou Robusta">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="pays" class="form-label"><?php echo $coffe->getPays() ?></label>
+                                    <label for="pays" class="form-label"><?php echo $coffee->getPays() ?></label>
                                     <input type="text" name="pays" class="form-control" id="pays" placeholder="Pays">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="img" class="form-label"><?php echo $coffe->getPhotos() ?></label>
+                                    <label for="img" class="form-label"><?php echo $coffee->getPhotos() ?></label>
                                     <input class="form-control" name="img" type="file" id="img">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="prix" class="form-label"><?php echo $coffe->getPrix() ?></label>
+                                    <label for="prix" class="form-label"><?php echo $coffee->getPrix() ?></label>
                                     <input type="text" name="prix" class="form-control" id="prix" placeholder="Prix">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="profil_aromatique" class="form-label"><?php echo $coffe->getProfil_aromatique() ?></label>
+                                    <label for="profil_aromatique" class="form-label"><?php echo $coffee->getProfil_aromatique() ?></label>
                                     <textarea class="form-control" name="profil_aromatique" id="profil_aromatique" rows="3"></textarea>
                                 </div>
 
@@ -73,8 +73,7 @@
 
 </body>
 
-<footer>
     <?php require_once 'layouts/footer.php';?>
-</footer>
+
 
 </html>
