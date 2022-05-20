@@ -15,10 +15,12 @@
 <?php require_once 'layouts/header.php';?>
 </header>
     <main class="m-2">
-        <div class="row w-75 m-auto">
+        <div class="row w-75 m-auto text-white">
 
             <!---photo + lien + titre--->
             <!---boucle img titre  contenu *6--->
+            <h1 class="hRobustarabica mb-3 pt-3">Robusta</h1>
+            <p class="pRobustarabica pt-3 mb-5">Le café robusta tient son nom de la robustesse et de la résistance de son arbre. Ce caféier peut atteindre près d’une dizaine de mètres et résiste à de nombreuses maladies, insectes ou conditions météorologiques extrêmes. Il craint néanmoins le gel. Le café robusta est cultivé dans les plaines à une altitude plus basse que l’arabica, entre 0 et 800 mètres d'altitude sous un climat chaud oscillant entre 24 et 30°C et souvent en plein soleil. Dans ces conditions et grâce à sa croissance très rapide, cette espèce de caféier est plus facile à cultiver que l'arabica. Les fleurs du robusta fleurissent de façon irrégulière et son fruit mûrit au bout de dix à onze mois. Le caféier robusta donne des grains jaunes à bruns.</p>
             <?php foreach($listAllRobusta as $robusta):?> 
                 <?php
                 $chaine = $robusta->getProfil_aromatique();

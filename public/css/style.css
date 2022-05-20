@@ -143,24 +143,19 @@ h5
    align-self: center;
 }
 
+/*FOOTER*/
 #footer{
-
  background-color: var(--dark);
  color: var(--creme);
-
 }
 
 
 .header{
-
   background-color: var(--creme);
-  
-
 }
 
 .textheader {
   color: var(--creme);
-
 }
 
 
@@ -189,10 +184,7 @@ h5
   cursor : url('../images/coffee-bean_icon-icons.com_61176.png.'),pointer;
 }
 
-
-
 .titleSite:hover {
-
   color: goldenrod;
   font-size: 2em;
   margin: 20px 50px;
@@ -202,15 +194,11 @@ h5
 
 #left {
 
-  
     border-radius: 5%;
     transition: 0.7s;
-
-
 }
 
 #left:hover{
-
   color: #111; 
   background: rgb(218, 165, 32); 
   box-shadow: 0 0 100px rgba(218, 165, 32, 0.596);
@@ -220,15 +208,12 @@ h5
 
 }
 
-
 #right {
   border-radius: 5%;
   transition: 0.7s;
-
 }
 
 #right:hover{
-
 color: #111; 
   background: rgb(218, 165, 32); 
   box-shadow: 0 0 100px rgba(218, 165, 32, 0.596);
@@ -241,12 +226,9 @@ color: #111;
 
 .arabic{
   transition: 0.7s;
-
-
 }
 
 .arabic:hover{
-
   opacity: 0.90;
   transition: 0.3s;
   cursor : url('../images/coffee-bean_icon-icons.com_61176.png.'),pointer;
@@ -255,8 +237,6 @@ color: #111;
 
 .robust{
   transition: 0.7s;
-
-
 }
 
 .robust:hover{
@@ -273,10 +253,9 @@ color: #111;
   cursor : url('../images/coffee-bean_icon-icons.com_61176.png.'),pointer;
 }
 
-/*One Coffee*/
 
+/*VIEW PAGE One Coffee*/
 
-/*Couleur du text*/
 .textcolor{
 
   color: var(--creme);
@@ -284,7 +263,53 @@ color: #111;
   
 }
 
-.texte{
-  color: var(--creme);
 
+/*Page Robusta et arabica VIEW*/
+.hRobustarabica{
+
+  text-align: center;
+  color: var(--creme);
+  text-decoration: underline;
+  font-size: 4rem;
+  
 }
+
+.pRobustarabica{
+
+  text-align: center;
+  color: var(--creme);
+  font-size: 1.2rem;
+}
+
+
+
+
+/*TEST*/
+
+.polling_message {
+  text-align: center;
+  color: white;
+  float: left;
+  margin-right: 10%;
+}
+
+.view_port {
+  background-color: black;
+  height: 15px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cylon_eye {
+  background-color: goldenrod;
+  background-image:linear-gradient(to right, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+  color: white;
+  height: 100%;
+  width: 20%;
+
+  -webkit-animation: 6s linear 0s infinite alternate move_eye;
+          animation: 6s linear 0s infinite alternate move_eye;
+}
+
+@-webkit-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+        @keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
