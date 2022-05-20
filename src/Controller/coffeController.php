@@ -79,9 +79,9 @@ class CoffeController
 
             $entity = new Coffe();
 
-            $entity->setNom(htmlspecialchars(strip_tags(strtolower($_POST['nom']))));
+            $entity->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
             $entity->setType(htmlspecialchars(strip_tags(strtolower($_POST['type']))));
-            $entity->setPays(htmlspecialchars(strip_tags(strtolower($_POST['pays']))));
+            $entity->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
             $entity->setPhotos($_FILES['img']['name']);
             $entity->setPrix(htmlspecialchars(strip_tags(strtolower($_POST['prix']))));
             $entity->setProfil_aromatique(htmlspecialchars(strip_tags(strtolower($_POST['profil_aromatique']))));
@@ -89,7 +89,14 @@ class CoffeController
 
             // Insertion dans la BDD
 
+<<<<<<< HEAD
             $success = $coffeRepository->update($entity, $id);
+=======
+
+            $success = $coffeRepository->update($entity, $id);
+
+
+>>>>>>> 99b232f65d2675919833b21934a33ae8cfca2f8c
             // Verifier que le champs soit vide ou pas sinon envoyer les données
 
         }
@@ -115,7 +122,11 @@ class CoffeController
         $deleteObject = $coffeRepository->remove($_GET['id']);
         
         //Redirige l'utilisateur vers la route "/liste"
+<<<<<<< HEAD
         header('Location: /');
+=======
+       header('Location: /');
+>>>>>>> 99b232f65d2675919833b21934a33ae8cfca2f8c
     }
 
 
