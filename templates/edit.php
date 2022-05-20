@@ -32,7 +32,7 @@
 
                                 <div class="mb-3">
                                     <label for="nom" class="form-label">Nom</label>
-                                    <input type="text" name="nom" class="form-control" id="nom" placeholder="Nom">
+                                    <input type="text" name="nom" class="form-control" id="nom" placeholder="<?= $coffeeObject->getNom()?>">
                                 </div>
 
                                 <div class="mb-3">
@@ -71,12 +71,12 @@
 
                                 <div class="mb-3">
                                     <label for="prix" class="form-label">Prix</label>
-                                    <input type="text" name="prix" class="form-control" id="prix" placeholder="Prix">
+                                    <input type="text" name="prix" class="form-control" id="prix" placeholder="<?= $coffeeObject->getPrix()?>">
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="profil_aromatique" class="form-label">Profil aromatique</label>
-                                    <textarea class="form-control" name="profil_aromatique" id="profil_aromatique" rows="3"></textarea>
+                                    <textarea class="form-control" name="profil_aromatique" id="profil_aromatique" rows="3"><?= $coffeeObject->getProfil_aromatique()?></textarea>
                                 </div>
 
                                 <button class="btn btn-seconday">Envoyer</button>
