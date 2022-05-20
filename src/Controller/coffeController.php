@@ -23,15 +23,9 @@ class CoffeController
     public function add(){
     {
 
-<<<<<<< HEAD
-
-        if (!empty($_POST)) {
-
-=======
         if (!empty($_POST)) {
 
 
->>>>>>> 5edc22be272c2394ecba9086bf3f4e5b77842ec1
             $uploadService = new UploadService;
             $file = $uploadService->upload($_FILES['img']);
             $entity = new Coffe();
@@ -52,18 +46,8 @@ class CoffeController
                 $coffeRepository = new CoffeRepository();
                 $success = $coffeRepository->add($entity);
 
-<<<<<<< HEAD
-=======
             }
 
-
-
-                
->>>>>>> 5edc22be272c2394ecba9086bf3f4e5b77842ec1
-                
-
-
-                
         }
 
 
@@ -110,7 +94,7 @@ class CoffeController
                     unlink("img_products/{$coffeeObject->getPhotos()}");
 
                     // Stocke le nouveau nom de l'image
-                    $coffeeObject->getPhotos($file);
+                    // $coffeeObject->getPhotos($file);
                 }
                 else {
                     $error = true;
@@ -157,8 +141,11 @@ class CoffeController
     public function delete() {
 
         $coffeRepository = new CoffeRepository();
-        $deleteObject = $coffeRepository->remove($_GET['id']);
+       
+        $coffee = $coffeRepository->selectId($_GET['id']);
+        unlink("img_products/{$coffee->getPhotos()}");
         
+        $deleteObject = $coffeRepository->remove($_GET['id']);
         //Redirige l'utilisateur vers la route "/liste"
        header('Location: /');
     }
