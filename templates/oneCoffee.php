@@ -19,27 +19,27 @@
     <?php require_once 'layouts/header.php';?>
     </header>
 
-    <?php foreach($listAllCoffe as $coffee):?> 
+   
 
         <div class="container">
             <div class="row">
                 <div class="col-5">
-                    <img src="<?php echo $coffee->setPhotos(); ?>" alt="">
+                    <img src="img_products/<?= $coffeeObject->getPhotos(); ?>" alt="">
                 </div>
                 <div class="col-7">
-                <h2><?php echo $coffee->setNom(); ?></h2>
+                <h2><?= $coffeeObject->getNom(); ?></h2>
                 <ul>
-                    <li><p>Variété</p><?php echo $coffee->setType(); ?></li>
-                    <li><p>Pays d'origine</p><?php echo $coffee->setPays(); ?></li>
-                    <li><p>Profil aromatique</p><?php echo $coffee->setProfil_aromatique(); ?></li>
-                    <li><p>Prix au kilo</p><?php echo $coffee->setPrix(); ?></li>
+                    <li><p>Variété</p><?= $coffeeObject->getType(); ?></li>
+                    <li><p>Pays d'origine</p><?= $coffeeObject->getPays(); ?></li>
+                    <li><p>Profil aromatique</p><?= $coffeeObject->getProfil_aromatique(); ?></li>
+                    <li><p>Prix au kilo</p><?= $coffeeObject->getPrix(); ?></li>
                 </ul>
-                    <a href="/delete/avis?id=<?php echo $coffee->getId(); ?>" class="btn btn-dark">Supprimer</a>
-                    <a href="/update/avis?id=<?php echo $coffee->getId(); ?>" class="btn btn-dark">Editer</a>
+                    <a href="/delete/avis?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Supprimer</a>
+                    <a href="/update/avis?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Editer</a>
                 </div>
             </div>
         </div>
-        <?php endforeach;?>
+        
 
     <footer>
     <?php require_once 'layouts/footer.php';?>

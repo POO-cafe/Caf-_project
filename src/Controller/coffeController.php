@@ -97,6 +97,17 @@ class CoffeController
             $coffe->$coffeRepository->selectId($id);
 
 
-        require_once '../../templates/edit.php';
+        require_once '../../../templates/edit.php';
     }
+
+    public function selectId(){
+
+        $coffeRepository = new CoffeRepository();
+        $id = $_GET["id"];
+        $coffeeObject= $coffeRepository->selectId($id);
+        
+
+        require_once __DIR__.'../../../templates/oneCoffee.php';
+    }
+
 }
