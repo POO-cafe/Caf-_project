@@ -55,39 +55,6 @@ class CoffeController
     
     {
         $coffeRepository = new CoffeRepository();
-<<<<<<< HEAD
-        $listAllRobusta = $coffeRepository->selectAll();
-
-        require_once __DIR__ . '../../../templates/robusta.php';
-
-    }
-    //Modification des produits robusta
-    public function editRobusta()
-    {
-
-        $coffeRepository = new CoffeRepository();
-        $robusta = $coffeRepository->edit($_GET['id']);
-
-        $robusta->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
-        $robusta->setType(htmlspecialchars(strip_tags($_POST['type'])));
-        $robusta->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
-        $robusta->setPhotos(htmlspecialchars(strip_tags($_POST['photos'])));
-        $robusta->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
-        $robusta->setProfil_aromatique($_POST['profil_aromatique']);
-
-        if (!empty($_POST)) {
-            $robusta->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
-            $robusta->setType(htmlspecialchars(strip_tags($_POST['type'])));
-            $robusta->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
-            $robusta->setPhotos(htmlspecialchars(strip_tags($_POST['photos'])));
-            $robusta->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
-            $robusta->setProfil_aromatique($_POST['profil_aromatique']);
-
-            $success = $coffeRepository->add($robusta);
-        }
-=======
->>>>>>> 014bc987b93a986472006d2e51cf7ed13cc369a5
-
         $listAllRobusta = $coffeRepository->selectAllRobusta();
         require_once __DIR__ . '../../../templates/robusta.php';
     }
