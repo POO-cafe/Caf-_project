@@ -20,10 +20,13 @@ class CoffeController
     }
 
     // Insertion d'un café avec condition pour le type du café 'arabica ou robusta'
+
     public function add(){
     
 
+
         if (!empty($_POST)) {
+
 
 
             $uploadService = new UploadService;
@@ -48,20 +51,20 @@ class CoffeController
 
             }
 
-
-
-                
-                
-
-
-                
         }
+
 
 
 
         require_once __DIR__ . '../../../templates/forms.php';
     }
+
+    
+
+        
+    
 //---------------------------------CAFES ROBUSTA----------------------------------------------------
+
 
     //Selectionne uniquement les cafés robusta
     public function selectAllRobusta()
