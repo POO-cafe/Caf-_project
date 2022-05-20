@@ -24,24 +24,27 @@ class CoffeController
 
         if (!empty($_POST)) {
 
-
+            $uploadService = new UploadService;
+            $file = $uploadService->upload($_FILES['img']['name']);
             $entity = new Coffe();
 
 
             $entity->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
             $entity->setType(htmlspecialchars(strip_tags($_POST['type'])));
             $entity->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
-            $entity->setPhotos($_FILES['img']['name']);
+            $entity->setPhotos($file);
             $entity->setPrix(htmlspecialchars(strip_tags($_POST['prix'])));
             $entity->setProfil_aromatique(htmlspecialchars(strip_tags($_POST['profil_aromatique'])));
 
             // Verifier que le champs soit vide ou pas sinon envoyer les données
             if ($_POST['type'] === "arabica" || $_POST['type'] === "robusta") {
 
-
+               
                 // Insertion dans la BDD
                 $coffeRepository = new CoffeRepository();
                 $success = $coffeRepository->add($entity);
+
+                
                 
                 
             }
