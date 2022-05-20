@@ -39,12 +39,31 @@
 
                                 <div class="mb-3">
                                     <label for="type" class="form-label">Type</label>
-                                    <input type="text" name="type" class="form-control" id="type" placeholder="Arabica ou Robusta">
+                                    <select class=form-control name="type" id="type" >
+                                    <option value=un>Selectionnez la variétée de café</option>
+                                    <option value=arabica>arabica</option>
+                                    <option value=robusta>robusta</option>
+                                    </select>
+                                    
+                                    
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="pays" class="form-label">Pays</label>
-                                    <input type="text" name="pays" class="form-control" id="pays" placeholder="Pays">
+                                    <select class=form-control name="pays" id="pays" >
+                                    <option value=a>Selectionnez l'origine du café</option>
+                                    <option value=Bresil>Bresil</option>
+                                    <option value=Burundi>Burundi</option>
+                                    <option value=d>Colombie</option>
+                                    <option value=e>Costa Rica</option>
+                                    <option value=f>Ethiopie</option>
+                                    <option value=g>Italie</option>
+                                    <option value=h>Nicaragua</option>
+                                    <option value=i>Mexique</option>
+                                    <option value=j>Perou</option>
+                                    <option value=k>Turquie</option>
+                                    <option value=l>Espagne</option>
+                                    </select>
                                 </div>
 
                                 <div class="mb-3">
