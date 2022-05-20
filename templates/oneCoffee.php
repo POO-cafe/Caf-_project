@@ -34,17 +34,16 @@
                     <li class="listOneCoffee">Profil aromatique : <?= $coffeeObject->getProfil_aromatique(); ?></li>
                     <li class="listOneCoffee">Prix au kilo : <?= $coffeeObject->getPrix(); ?> € </li>
                 </ul>
-<<<<<<< HEAD
+
                     <a href="/delete?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark m-2">Supprimer</a>
                     <a href="/edit?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark m-2">Editer</a>
-=======
+
                     <a href="/delete?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Supprimer</a>
-<<<<<<< HEAD
+
                     <a href="/update/avis?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Editer</a>
-=======
+
                     <a href="/edit?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Editer</a>
->>>>>>> 33f171c63c7054e196f2f01b8a385c5de1731275
->>>>>>> 9e6f518e450a67615077c371d61c42d2629c54ba
+
                 </div>
             </div>
         </div>
