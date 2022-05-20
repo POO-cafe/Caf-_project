@@ -47,7 +47,6 @@
                                     
                                     
                                 </div>
-
                                 <div class="mb-3">
                                     <label for="pays" class="form-label">Pays</label>
                                     <select class=form-control name="pays" id="pays" >
