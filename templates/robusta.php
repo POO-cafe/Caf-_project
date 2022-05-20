@@ -25,7 +25,7 @@
                 $shortText = substr($chaine,0,100) . "..."; 
                 ?>
                 <div class="col-lg-4 col-md-12 mb-1 p-1">
-                    <div class="card shadow p-3 mb-5 bg-body rounded">
+                    <div class="card shadow p-3 mb-5 bg-body rounded robust">
                             <a href="oneCoffee?id=<?= $robusta->getId() ?>"><img class="zoomImgCard card-img-top" src="img_products/<?= $robusta->getPhotos(); ?>" alt="café"></a>
                             <h2 class="card-title"><?= $robusta->getNom(); ?></h2>
                         <div class="card-body">

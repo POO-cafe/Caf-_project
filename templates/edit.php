@@ -25,14 +25,20 @@
                     <div class="split2 left2">
                     </div>
                     <div class="split2 right2 ">
-                        <div class="row centered2 p-0">
-                            <div class="col middleForm">
+                        <div class="row centered2 p-0 ">
+                            <div class="col middleForm text-white">
                                 <h3>Modification d'un café</h3>
                                  <form action="" method="post" enctype="multipart/form-data">
 
+<<<<<<< HEAD
                                 <div class="mb-3">
                                     <label for="nom" class="form-label">Nom</label>
+                                    <input type="text" name="nom" class="form-control" id="nom" placeholder="<?= $coffeeObject->getNom()?>">
+=======
+                                <div class="mb-3 ">
+                                    <label for="nom" class="form-label ">Nom</label>
                                     <input type="text" name="nom" class="form-control" id="nom" placeholder="Nom">
+>>>>>>> 5edc22be272c2394ecba9086bf3f4e5b77842ec1
                                 </div>
 
                                 <div class="mb-3">
@@ -71,12 +77,12 @@
 
                                 <div class="mb-3">
                                     <label for="prix" class="form-label">Prix</label>
-                                    <input type="text" name="prix" class="form-control" id="prix" placeholder="Prix">
+                                    <input type="text" name="prix" class="form-control" id="prix" placeholder="<?= $coffeeObject->getPrix()?>">
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="profil_aromatique" class="form-label">Profil aromatique</label>
-                                    <textarea class="form-control" name="profil_aromatique" id="profil_aromatique" rows="3"></textarea>
+                                    <textarea class="form-control" name="profil_aromatique" id="profil_aromatique" rows="3"><?= $coffeeObject->getProfil_aromatique()?></textarea>
                                 </div>
 
                                 <button class="btn btn-seconday">Envoyer</button>

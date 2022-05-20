@@ -22,9 +22,9 @@
       <div class="container">
           <div class="d-flex justify-content-around alignPictures align-items-center">
             
-                <a href="/arabica" class=" text-end m-0"><img class="img_index " src="images/arabica.jpg" alt="arabica"></a>
+                <a href="/arabica" class=" text-end m-0"><img class="img_index " src="images/arabica.jpg" alt="arabica" id="left"></a>
               
-                <a href="/robusta" class="m-0"><img  class="img_index " src="images/robusta.jpg" alt="robusta"></a>
+                <a href="/robusta" class="m-0"><img  class="img_index " src="images/robusta.jpg" alt="robusta" id="right"></a>
               
           </div>
       </div>
