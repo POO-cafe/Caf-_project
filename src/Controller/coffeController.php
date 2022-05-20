@@ -20,10 +20,20 @@ class CoffeController
     }
 
     // Insertion d'un café avec condition pour le type du café 'arabica ou robusta'
+<<<<<<< HEAD
     public function add(){
     {
+=======
+<<<<<<< HEAD
+    public function add()
+    {
+=======
+    public function add(){
+    
+>>>>>>> f4fba73b66e94d2e76846dfd4f32f15b5477a1db
 
         if (!empty($_POST)) {
+>>>>>>> 499f3cd4981d3ea4f48e35ccfda60f7439ab4214
 
 
             $uploadService = new UploadService;
@@ -48,15 +58,26 @@ class CoffeController
 
             }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+                
+                
+
+
+                
+>>>>>>> f4fba73b66e94d2e76846dfd4f32f15b5477a1db
         }
 
 
-    }
 
+>>>>>>> 499f3cd4981d3ea4f48e35ccfda60f7439ab4214
         require_once __DIR__ . '../../../templates/forms.php';
     }
-
-    //---------------------------------CAFES ROBUSTA----------------------------------------------------
+//---------------------------------CAFES ROBUSTA----------------------------------------------------
 
     //Selectionne uniquement les cafés robusta
     public function selectAllRobusta()
@@ -81,8 +102,9 @@ class CoffeController
     {
         $coffeRepository = new CoffeRepository();
         $id = $_GET["id"];
-        $coffeeObject= $coffeRepository->selectId($id);
+
         if (!empty($_POST)) {
+<<<<<<< HEAD
             if ($_FILES['img']['error'] === 0) {
                 // Appelle le service d'upload pour gérer le fichier
                 $uploadService = new UploadService;
@@ -103,13 +125,16 @@ class CoffeController
                 }
             }
             if (!$error) {
+=======
+
+>>>>>>> f4fba73b66e94d2e76846dfd4f32f15b5477a1db
 
             $entity = new Coffe();
 
             $entity->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
             $entity->setType(htmlspecialchars(strip_tags(strtolower($_POST['type']))));
             $entity->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
-            $entity->setPhotos($file);
+            $entity->setPhotos($_FILES['img']['name']);
             $entity->setPrix(htmlspecialchars(strip_tags(strtolower($_POST['prix']))));
             $entity->setProfil_aromatique(htmlspecialchars(strip_tags(strtolower($_POST['profil_aromatique']))));
 
@@ -123,11 +148,11 @@ class CoffeController
             // Verifier que le champs soit vide ou pas sinon envoyer les données
 
         }
-            
-    }
+            $coffee= $coffeRepository->selectId($id);
+
+
         require_once __DIR__.'../../../templates/edit.php';
     }
-
     //Selectionne d'un coffee
     public function selectId(){
 
