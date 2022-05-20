@@ -11,11 +11,11 @@
     <title>Robusta</title>
 </head>
 <body>
-<hearder>
+<header>
 <?php require_once 'layouts/header.php';?>
 </header>
     <main class="m-2">
-        <div class="row w-75 m-auto text-white">
+        <div class="row w-75 m-auto">
 
             <!---photo + lien + titre--->
             <!---boucle img titre  contenu *6--->
