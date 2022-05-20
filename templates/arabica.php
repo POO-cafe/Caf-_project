@@ -19,7 +19,6 @@
 </header>
     <main class="m-2">
         <div class="row w-75 m-auto">
-
             <!---photo + lien + titre--->
             <!---boucle img titre  contenu *6--->
             <?php foreach($listAllArabica as $arabica):?> 
@@ -30,8 +29,7 @@
                 <div class="col-lg-4 col-md-12 mb-1 p-1">
                     <div class="card shadow p-3 mb-5 bg-body rounded">
 
-                            <a href="oneCoffee?id=<?= $arabica->getId() ?>"><img class="zoomImgCard card-img-top" src="img_products/<?= $arabica->getPhotos(); ?>" alt="café"></a>
-
+                            <a href="oneCoffee?id=<?= $arabica->getID()?>"><img class="zoomImgCard card-img-top" src="img_products/<?= $arabica->getPhotos(); ?>" alt="café"></a>
 
                             <h2 class="card-title"><?= $arabica->getNom(); ?></h2>
                         <div class="card-body">

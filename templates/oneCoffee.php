@@ -21,28 +21,29 @@
 
    
 
-        <div class="container">
+        <div class="container d-flex justify-content-around alignPictures align-items-center">
             <div class="row">
                 <div class="col-5">
-                    <img src="img_products/<?= $coffeeObject->getPhotos(); ?>" alt="">
+                    <img class="img-thumbnail rounded float-start " src="img_products/<?= $coffeeObject->getPhotos(); ?>" alt="">
                 </div>
-                <div class="col-7">
-                <h2><?= $coffeeObject->getNom(); ?></h2>
-                <ul>
-                    <li><p>Variété</p><?= $coffeeObject->getType(); ?></li>
-                    <li><p>Pays d'origine</p><?= $coffeeObject->getPays(); ?></li>
-                    <li><p>Profil aromatique</p><?= $coffeeObject->getProfil_aromatique(); ?></li>
-                    <li><p>Prix au kilo</p><?= $coffeeObject->getPrix(); ?></li>
+                <div class="col-5 ml-5 p-5">
+                <h2 class="m-2 titleOneCoffee"><?= $coffeeObject->getNom(); ?></h2>
+                <ul class="p-0 m-2">
+                    <li class="listOneCoffee">Variété : <?= $coffeeObject->getType(); ?></li>
+                    <li class="listOneCoffee">Pays d'origine : <?= $coffeeObject->getPays(); ?></li>
+                    <li class="listOneCoffee">Profil aromatique : <?= $coffeeObject->getProfil_aromatique(); ?></li>
+                    <li class="listOneCoffee">Prix au kilo : <?= $coffeeObject->getPrix(); ?> € </li>
                 </ul>
-                    <a href="/delete?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Supprimer</a>
-                    <a href="/edit?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Editer</a>
+
+                    <a href="/delete?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark m-2">Supprimer</a>
+                    <a href="/edit?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark m-2">Editer</a>
+
                 </div>
             </div>
         </div>
         
 
-    <footer>
+    
     <?php require_once 'layouts/footer.php';?>
-    </footer>
-
+    
 </html>
