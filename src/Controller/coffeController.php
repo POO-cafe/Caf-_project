@@ -30,7 +30,7 @@ class CoffeController
 
 
             $uploadService = new UploadService;
-            $file = $uploadService->upload($_FILES['img']['name']);
+            $file = $uploadService->upload($_FILES['img']);
             $entity = new Coffe();
 
 
