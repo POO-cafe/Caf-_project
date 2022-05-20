@@ -20,29 +20,14 @@ class CoffeController
     }
 
     // Insertion d'un café avec condition pour le type du café 'arabica ou robusta'
-<<<<<<< HEAD
     public function add(){
     
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 8b403d1a56c11ed43f17cb5956e1a78c046b6a88
-    public function add(){
-    
-
->>>>>>> 88d1a07fcf572dcc2d2fdc1c39c1d0e5481f9dcb
 
         if (!empty($_POST)) {
-<<<<<<< HEAD
-=======
-
->>>>>>> 8b403d1a56c11ed43f17cb5956e1a78c046b6a88
-
 
 
             $uploadService = new UploadService;
-            $file = $uploadService->upload($_FILES['img']);
+            $file = $uploadService->upload($_FILES['img']['name']);
             $entity = new Coffe();
 
 
@@ -62,11 +47,7 @@ class CoffeController
                 $success = $coffeRepository->add($entity);
 
             }
-<<<<<<< HEAD
 
-
-
-<<<<<<< HEAD
 
 
                 
@@ -74,34 +55,14 @@ class CoffeController
 
 
                 
-=======
-                
-                
-
-
-                
-=======
->>>>>>> 8b403d1a56c11ed43f17cb5956e1a78c046b6a88
->>>>>>> 88d1a07fcf572dcc2d2fdc1c39c1d0e5481f9dcb
         }
 
 
 
-<<<<<<< HEAD
-        require_once __DIR__ . '../../../templates/forms.php';
-    }
-
-    
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 8b403d1a56c11ed43f17cb5956e1a78c046b6a88
         require_once __DIR__ . '../../../templates/forms.php';
     }
 //---------------------------------CAFES ROBUSTA----------------------------------------------------
 
->>>>>>> 88d1a07fcf572dcc2d2fdc1c39c1d0e5481f9dcb
     //Selectionne uniquement les cafés robusta
     public function selectAllRobusta()
     
@@ -128,6 +89,7 @@ class CoffeController
 
         if (!empty($_POST)) {
 
+
             $entity = new Coffe();
 
             $entity->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
@@ -152,14 +114,8 @@ class CoffeController
 
         require_once __DIR__.'../../../templates/edit.php';
     }
-<<<<<<< HEAD
-
-     //Selectionne d'un coffee
-     public function selectId(){
-=======
     //Selectionne d'un coffee
     public function selectId(){
->>>>>>> 88d1a07fcf572dcc2d2fdc1c39c1d0e5481f9dcb
 
         $coffeRepository = new CoffeRepository();
         $id = $_GET["id"];
@@ -171,11 +127,8 @@ class CoffeController
     public function delete() {
 
         $coffeRepository = new CoffeRepository();
-       
-        $coffee = $coffeRepository->selectId($_GET['id']);
-        unlink("img_products/{$coffee->getPhotos()}");
-        
         $deleteObject = $coffeRepository->remove($_GET['id']);
+        
         //Redirige l'utilisateur vers la route "/liste"
        header('Location: /');
     }
