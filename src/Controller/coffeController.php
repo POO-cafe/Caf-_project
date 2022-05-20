@@ -30,7 +30,7 @@ class CoffeController
 
 
             $uploadService = new UploadService;
-            $file = $uploadService->upload($_FILES['img']);
+            $file = $uploadService->upload($_FILES['img']['name']);
             $entity = new Coffe();
 
 
@@ -92,6 +92,7 @@ class CoffeController
 
         if (!empty($_POST)) {
 
+
             $entity = new Coffe();
 
             $entity->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
@@ -129,11 +130,8 @@ class CoffeController
     public function delete() {
 
         $coffeRepository = new CoffeRepository();
-       
-        $coffee = $coffeRepository->selectId($_GET['id']);
-        unlink("img_products/{$coffee->getPhotos()}");
-        
         $deleteObject = $coffeRepository->remove($_GET['id']);
+        
         //Redirige l'utilisateur vers la route "/liste"
        header('Location: /');
     }
