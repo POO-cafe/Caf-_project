@@ -20,7 +20,7 @@
     </header>
     <main>
       <div class="container">
-          <div class="d-flex mt-5 justify-content-around">
+          <div class="d-flex justify-content-around alignPictures align-items-center">
             
                 <a href="/arabica" class=" text-end m-0"><img class="img_index " src="images/arabica.jpg" alt="arabica"></a>
               
