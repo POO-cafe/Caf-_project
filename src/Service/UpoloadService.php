@@ -3,7 +3,7 @@
 class UploadService
 {
 	// Dossier dans le dossier "public" contenant les fichiers uploads
-	private const PATH_DIR = 'preview-projects';
+	private const PATH_DIR = 'img_products';
 
 	// Poids en Mo
 	private const MAX_UPLOAD = 1;
