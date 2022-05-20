@@ -176,6 +176,7 @@ h5
   padding: 6px 0; 
   transition: 0.7s;
   color: goldenrod!important;
+  cursor : url('../images/coffee-bean_icon-icons.com_61176.png.'),pointer;
 }
 
 
@@ -186,6 +187,7 @@ h5
   font-size: 2em;
   margin: 20px 50px;
   transition: 0.7s;
+  cursor : url('../images/coffee-bean_icon-icons.com_61176.png.'),pointer;
 }
 
 #left {
@@ -204,6 +206,7 @@ h5
   box-shadow: 0 0 100px rgba(218, 165, 32, 0.596);
   transition: 0.7s;
   opacity: 0.70;
+  cursor : url('../images/coffee-bean_icon-icons.com_61176.png.'),pointer;
 
 }
 
@@ -221,6 +224,7 @@ color: #111;
   box-shadow: 0 0 100px rgba(218, 165, 32, 0.596);
   opacity: 0.70;
   transition: 0.7s;
+  cursor : url('../images/coffee-bean_icon-icons.com_61176.png.'),pointer;
 
 
 }
@@ -235,6 +239,7 @@ color: #111;
 
   opacity: 0.90;
   transition: 0.3s;
+  cursor : url('../images/coffee-bean_icon-icons.com_61176.png.'),pointer;
   
 }
 
@@ -248,12 +253,14 @@ color: #111;
 
   opacity: 0.90;
   transition: 0.3s;
+  cursor : url('../images/coffee-bean_icon-icons.com_61176.png.'),pointer;
   
 }
 
 .foot:hover{
   color: var(--dark);
   transition: 0.7s;
+  cursor : url('../images/coffee-bean_icon-icons.com_61176.png.'),pointer;
 }
 
 /*One Coffee*/

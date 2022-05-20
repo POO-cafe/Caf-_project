@@ -21,19 +21,13 @@ class CoffeController
 
     // Insertion d'un café avec condition pour le type du café 'arabica ou robusta'
     public function add(){
-    {
-
-<<<<<<< HEAD
+    
 
         if (!empty($_POST)) {
 
-=======
-        if (!empty($_POST)) {
 
-
->>>>>>> 5edc22be272c2394ecba9086bf3f4e5b77842ec1
             $uploadService = new UploadService;
-            $file = $uploadService->upload($_FILES['img']);
+            $file = $uploadService->upload($_FILES['img']['name']);
             $entity = new Coffe();
 
 
@@ -52,14 +46,11 @@ class CoffeController
                 $coffeRepository = new CoffeRepository();
                 $success = $coffeRepository->add($entity);
 
-<<<<<<< HEAD
-=======
             }
 
 
 
                 
->>>>>>> 5edc22be272c2394ecba9086bf3f4e5b77842ec1
                 
 
 
@@ -67,12 +58,10 @@ class CoffeController
         }
 
 
-    }
 
         require_once __DIR__ . '../../../templates/forms.php';
     }
-
-    //---------------------------------CAFES ROBUSTA----------------------------------------------------
+//---------------------------------CAFES ROBUSTA----------------------------------------------------
 
     //Selectionne uniquement les cafés robusta
     public function selectAllRobusta()
@@ -97,35 +86,16 @@ class CoffeController
     {
         $coffeRepository = new CoffeRepository();
         $id = $_GET["id"];
-        $coffeeObject= $coffeRepository->selectId($id);
+
         if (!empty($_POST)) {
-            if ($_FILES['img']['error'] === 0) {
-                // Appelle le service d'upload pour gérer le fichier
-                $uploadService = new UploadService;
-                $file = $uploadService->upload($_FILES['img']);
 
-                // Si aucune erreur lors de l'upload
-                if ($file) {
-                    // Supprime l'ancienne image
-                    unlink("img_products/{$coffeeObject->getPhotos()}");
-
-                    // Stocke le nouveau nom de l'image
-                    $coffeeObject->getPhotos($file);
-                }
-                else {
-                    $error = true;
-                    $success = 'danger';
-                    $message = 'Le fichier est incorrect';
-                }
-            }
-            if (!$error) {
 
             $entity = new Coffe();
 
             $entity->setNom(htmlspecialchars(strip_tags($_POST['nom'])));
             $entity->setType(htmlspecialchars(strip_tags(strtolower($_POST['type']))));
             $entity->setPays(htmlspecialchars(strip_tags($_POST['pays'])));
-            $entity->setPhotos($file);
+            $entity->setPhotos($_FILES['img']['name']);
             $entity->setPrix(htmlspecialchars(strip_tags(strtolower($_POST['prix']))));
             $entity->setProfil_aromatique(htmlspecialchars(strip_tags(strtolower($_POST['profil_aromatique']))));
 
@@ -139,11 +109,11 @@ class CoffeController
             // Verifier que le champs soit vide ou pas sinon envoyer les données
 
         }
-            
-    }
+            $coffee= $coffeRepository->selectId($id);
+
+
         require_once __DIR__.'../../../templates/edit.php';
     }
-
     //Selectionne d'un coffee
     public function selectId(){
 
