@@ -21,13 +21,17 @@
         <div class="row w-75 m-auto">
             <!---photo + lien + titre--->
             <!---boucle img titre  contenu *6--->
+            <h1 class="hRobustarabica mb-3 pt-3">Arabica</h1>
+            <p class="pRobustarabica pt-3 mb-5">Le café arabica est un café doux, plus ou moins fruité et aromatique, issu de haute altitude tandis que le café robusta est puissant, amer, terreux issu de basse altitude.
+L'arabica et le robusta sont deux espèces botaniques originaires d’Afrique qui sont les plus cultivées dans le monde. Cependant, il existe une très grande diversité de caféiers dans le monde entier. Les caféiers appartiennent au genre Coffea de la famille des rubiacées. Le genre Coffea compte près de 80 espèces et plusieurs centaines de variétés différentes. Les espèces de caféiers les plus répandues et les plus cultivées sont le Coffea arabica et le Coffea canephora. Comme son nom l'indique, le fruit du premier caféier donne l'arabica et le second donne le robusta. Nous allons donc détailler ces deux espèces botaniques.</p>
+            
             <?php foreach($listAllArabica as $arabica):?> 
                 <?php
                 $chaine = $arabica->getProfil_aromatique();
                 $shortText = substr($chaine,0,100) . "..."; 
                 ?>
-                <div class="col-lg-4 col-md-12 mb-1 p-1">
-                    <div class="card shadow p-3 mb-5 bg-body rounded arabic">
+                <div class="col-lg-4 col-md-12 mb-1 p-1 ">
+                    <div class="card shadow p-3 mb-5 bg-body rounded arabic d-flex">
 
                             <a href="oneCoffee?id=<?= $arabica->getID()?>"><img class="zoomImgCard card-img-top" src="img_products/<?= $arabica->getPhotos(); ?>" alt="café"></a>
 

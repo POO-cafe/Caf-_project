@@ -24,9 +24,9 @@
                 <div class="insertCoffeeForms">
                     <div class="split2 left2">
                     </div>
-                    <div class="split2 right2 ">
+                    <div class="split2 right2 text-white">
                         <div class="row centered2 p-0 ">
-                            <div class="col middleForm text-white">
+                            <div class="col middleForm">
                                 <h3>Modification d'un café</h3>
                                  <form action="" method="post" enctype="multipart/form-data">
 
@@ -79,7 +79,7 @@
                                     <textarea class="form-control" name="profil_aromatique" id="profil_aromatique" rows="3"></textarea>
                                 </div>
 
-                                <button class="btn btn-seconday">Envoyer</button>
+                                <button class="btn btn-light">Envoyer</button>
 
                                 </form>
                             </div>
