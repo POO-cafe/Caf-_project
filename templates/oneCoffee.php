@@ -34,8 +34,8 @@
                     <li><p>Profil aromatique</p><?= $coffeeObject->getProfil_aromatique(); ?></li>
                     <li><p>Prix au kilo</p><?= $coffeeObject->getPrix(); ?></li>
                 </ul>
-                    <a href="/delete/avis?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Supprimer</a>
-                    <a href="/update/avis?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Editer</a>
+                    <a href="/delete?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Supprimer</a>
+                    <a href="/edit?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Editer</a>
                 </div>
             </div>
         </div>
