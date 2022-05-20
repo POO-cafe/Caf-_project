@@ -29,10 +29,10 @@
                 <div class="col-5 ml-5 p-5">
                 <h2><?= $coffeeObject->getNom(); ?></h2>
                 <ul>
-                    <li><p>Variété</p><?= $coffeeObject->getType(); ?></li>
-                    <li><p>Pays d'origine</p><?= $coffeeObject->getPays(); ?></li>
-                    <li><p>Profil aromatique</p><?= $coffeeObject->getProfil_aromatique(); ?></li>
-                    <li><p>Prix au kilo</p><?= $coffeeObject->getPrix(); ?></li>
+                    <li>Variété : <?= $coffeeObject->getType(); ?></li>
+                    <li>Pays d'origine : <?= $coffeeObject->getPays(); ?></li>
+                    <li>Profil aromatique : <?= $coffeeObject->getProfil_aromatique(); ?></li>
+                    <li>Prix au kilo : <?= $coffeeObject->getPrix(); ?></li>
                 </ul>
                     <a href="/delete?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Supprimer</a>
                     <a href="/edit?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Editer</a>
