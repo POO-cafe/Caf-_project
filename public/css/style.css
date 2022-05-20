@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+
+:root {
+  --creme: #F7F1F0;
+  --grey: #C3A6A0;
+  --brown: #A14C38;
+  --dark: #262220;
+}
+
+
+
 * {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -8,7 +18,7 @@
 }
 
 body{
-  background-color: rgb(209, 203, 203);
+  background-color: var(--creme);
 }
 .zoomImgCard{
   width: 100%;
@@ -25,23 +35,24 @@ body{
 .img_index
 {
   width: 100%!important;
-  border: 1px solid dimgrey;
+  border: 1px solid var(--dark);
 }
 
 
 #formSection
 {
     height: 100vh;
-    background-color:lightgrey;
+    color:var(--brown)!;
 }
 
 
 h5 
 {
-   color: black;
+   color: var(--dark);
    font-size: 3em;
    padding: 50px 0;
 }
+
 .insertCoffeeForms
 {
    display: flex;
