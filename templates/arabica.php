@@ -22,14 +22,14 @@
 
             <!---photo + lien + titre--->
             <!---boucle img titre  contenu *6--->
-            <?php foreach($listAllArabica    as $arabica):?> 
+            <?php foreach($listAllArabica as $arabica):?> 
                 <?php
                 $chaine = $arabica->getProfil_aromatique();
                 $shortText = substr($chaine,0,100) . "..."; 
                 ?>
                 <div class="col-lg-4 col-md-12 mb-1 p-1">
                     <div class="card shadow p-3 mb-5 bg-body rounded">
-                            <a href="#"><img class="zoomImgCard card-img-top" src="img_products/<?= $robusta->getPhotos(); ?>" alt="café"></a>
+                            <a href="#"><img class="zoomImgCard card-img-top" src="img_products/<?= $arabica->getPhotos(); ?>" alt="café"></a>
                             <h2 class="card-title"><?= $arabica->getNom(); ?></h2>
                         <div class="card-body">
                             <h3 class="card-title">Variété : <?=$arabica->getType(); ?></h3>
