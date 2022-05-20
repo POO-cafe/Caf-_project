@@ -94,7 +94,7 @@ class CoffeController
             // Verifier que le champs soit vide ou pas sinon envoyer les données
 
         }
-            $coffe->$coffeRepository->selectAll($id);
+            $coffe->$coffeRepository->selectId($id);
 
 
         require_once '../../templates/edit.php';
