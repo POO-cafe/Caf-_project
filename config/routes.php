@@ -47,7 +47,7 @@ switch ($uri) {
 
     case '/oneCoffee':
         $controller = new CoffeController();
-        $controller->selectType();
+        $controller->selectId();
         break;
 
 
