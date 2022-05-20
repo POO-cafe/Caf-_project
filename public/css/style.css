@@ -128,5 +128,24 @@ h5
    align-self: center;
 }
 
+#footer{
+
+ background-color: var(--dark);
+ color: var(--creme);
+
+}
+
+
+.header{
+
+  background-color: var(--creme);
+  
+
+}
+
+.textheader {
+  color: var(--creme);
+
+}
 
 
