@@ -20,8 +20,6 @@
         <?php require_once 'layouts/header.php'; ?>
         </header>
         <main>
-           
-
             <section id="formsSection">
                 <div class="insertCoffeeForms">
                     <div class="split2 left2">
@@ -33,32 +31,32 @@
                                 <form action="" method="post" enctype="multipart/form-data">
 
                                 <div class="mb-3">
-                                    <label for="nom" class="form-label">Nom</label>
+                                    <label for="nom" class="form-label"><?php echo $coffe->getNom() ?></label>
                                     <input type="text" name="nom" class="form-control" id="nom" placeholder="Nom">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="type" class="form-label">Type</label>
+                                    <label for="type" class="form-label"><?php echo $coffe->getType() ?></label>
                                     <input type="text" name="type" class="form-control" id="type" placeholder="Arabica ou Robusta">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="pays" class="form-label">Pays</label>
+                                    <label for="pays" class="form-label"><?php echo $coffe->getPays() ?></label>
                                     <input type="text" name="pays" class="form-control" id="pays" placeholder="Pays">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="img" class="form-label">Photo</label>
+                                    <label for="img" class="form-label"><?php echo $coffe->getPhotos() ?></label>
                                     <input class="form-control" name="img" type="file" id="img">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="prix" class="form-label">Prix</label>
+                                    <label for="prix" class="form-label"><?php echo $coffe->getPrix() ?></label>
                                     <input type="text" name="prix" class="form-control" id="prix" placeholder="Prix">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="profil_aromatique" class="form-label">Profil aromatique</label>
+                                    <label for="profil_aromatique" class="form-label"><?php echo $coffe->getProfil_aromatique() ?></label>
                                     <textarea class="form-control" name="profil_aromatique" id="profil_aromatique" rows="3"></textarea>
                                 </div>
 

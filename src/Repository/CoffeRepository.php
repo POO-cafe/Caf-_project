@@ -7,7 +7,7 @@ class CoffeRepository extends Database {
 
     public function selectAll ()
     {
-        $query = $this->getDb()->query('SELECT * FROM cafes ');
+        $query = $this->getDb()->query('SELECT * FROM cafes');
         $allCoffees = $query->fetchAll();
 
         foreach($allCoffees as $coffee){
@@ -17,7 +17,7 @@ class CoffeRepository extends Database {
             $avisObject->setNom($coffee['nom']);
             $avisObject->setType($coffee['type']);
             $avisObject->setPays($coffee['pays']);
-            $avisObject->setPhotos($coffee['photos']);
+            $avisObject->setPhotos($coffee['photos']); 
             $avisObject->setPrix($coffee['prix']);
             $avisObject->setProfil_aromatique($coffee['profil_aromatique']);
 
@@ -28,6 +28,23 @@ class CoffeRepository extends Database {
 
         return $objects ?? [];
         
+    }
+
+    public function selectId (int $id){
+
+        $query = $this->getDb()->prepare('SELECT * FROM cafes WHERE id = :id');
+        $query->bindValue(':id', $id, PDO::PARAM_INT);
+        $query->execute();
+        $coffee = $query->fecth();
+
+        $coffee->setId($coffee['id']);
+        $coffee->setNom($coffee['nom']);
+        $coffee->setType($coffee['type']);
+        $coffee->setPays($coffee['pays']);
+        $coffee->setPhotos($coffee['photos']); 
+        $coffee->setPrix($coffee['prix']);
+        $coffee->setProfil_aromatique($coffee['profil_aromatique']);
+
     }
 
     public function selectAllArabica ()

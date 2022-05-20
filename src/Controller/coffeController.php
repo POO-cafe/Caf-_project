@@ -55,9 +55,17 @@ class CoffeController
     
     {
         $coffeRepository = new CoffeRepository();
-
         $listAllRobusta = $coffeRepository->selectAllRobusta();
         require_once __DIR__ . '../../../templates/robusta.php';
+    }
+    public function selectAllArabica()
+    
+    {
+        $coffeRepository = new CoffeRepository();
+
+        $listAllArabica = $coffeRepository->selectAllArabica();
+        
+        require_once __DIR__ . '../../../templates/arabica.php'; 
     }
 
 
@@ -86,7 +94,7 @@ class CoffeController
             // Verifier que le champs soit vide ou pas sinon envoyer les données
 
         }
-            $coffe->$coffeRepository->selectAll($id);
+            $coffe->$coffeRepository->selectId($id);
 
 
         require_once '../../templates/edit.php';

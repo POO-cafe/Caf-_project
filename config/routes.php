@@ -44,15 +44,13 @@ switch ($uri) {
         //Selectionne tous les caffès qui ont pour type arabica
         $controller->delete();
         break;
-    
-        case '/oneCoffee':
+
+    case '/oneCoffee':
         $controller = new CoffeController();
-        //Charge la methode corres^pondant a la vue souhaitée
-        //Selectionne tous les caffès qui ont pour type arabica
-        $controller->selectAll();
+        $controller->selectType();
         break;
-    
-   
+
+
 
     default:
         $controller = new ErreurController();
