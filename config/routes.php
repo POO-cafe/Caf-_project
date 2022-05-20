@@ -23,7 +23,7 @@ switch ($uri) {
         $controller = new CoffeController();
         //Charge la methode corres^pondant a la vue souhaitée
         //Selectionne tous les caffès qui ont pour type arabica
-        $controller->selectAllarabica();
+        $controller->selectAllArabica();
         break;
 
     case '/add':
@@ -44,17 +44,15 @@ switch ($uri) {
         //Selectionne tous les caffès qui ont pour type arabica
         $controller->delete();
         break;
-    case '/insert':
+
+        //Selectionne un caffès
+    case '/oneCoffee':
         $controller = new CoffeController();
-        //Charge la methode corres^pondant a la vue souhaitée
-        //Selectionne tous les caffès qui ont pour type arabica
-        $controller->insert();
+        $controller->selectId();
         break;
 
 
-
-
-
+        //Erreur 404
     default:
         $controller = new ErreurController();
         $controller->erreur404();

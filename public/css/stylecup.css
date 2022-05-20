@@ -1,0 +1,54 @@
+.test {
+    background-color: #efb54a;
+    height: 50vh;
+    
+}
+
+.cup {
+
+    height: 140px;
+    width: 180px;
+    border: 6px solid #efb54a;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    border-radius: 0px 0px 70px 70px;
+    background: url('../cup/coffee.png');
+    box-shadow: 0px 0px 0px 6px white;
+    background-repeat: repeat-x;
+    background-position: 0px 140px;
+    animation: fill 2.5s infinite;
+}
+@keyframes fill {
+    0%{
+        background-position: 0px 140px;
+            }
+            20%{
+                background-position: -450px 100px;
+            }
+            40%{
+                background-position: -900px 50px;
+            }
+            80%{
+                background-position: -1350px -40px;
+            }
+            100%{
+                background-position: 0px 140px;
+            }
+}
+
+.handle {
+    height: 70%;
+    width: 40%;
+    background-color: transparent;
+    border: 6px solid white;
+    position: relative;
+    left: 126px;
+    top: -5px;
+    border-radius: 0px 25px 80px 0px;
+}
+.error {
+    font-size: 80px;
+}
+
+

@@ -16,25 +16,27 @@
 
 <body>
 
-        <hearder>
+    <hearder>
         <?php require_once 'layouts/header.php'; ?>
         </header>
         <main>
-           
-
             <section id="formsSection">
-                <div class="insertCoffeeForms text-white">
+                <div class="insertCoffeeForms">
                     <div class="split2 left2">
                     </div>
-                    <div class="split2 right2 ">
-                        <div class="row centered2 p-0">
+                    <div class="split2 right2 text-white">
+                        <div class="row centered2 p-0 ">
                             <div class="col middleForm">
-                            <h3>Ajout d'un café</h3>
-                                <form action="" method="post" enctype="multipart/form-data">
+                                <h3>Modification d'un café</h3>
+                                 <form action="" method="post" enctype="multipart/form-data">
 
-                                <div class="mb-3">
-                                    <label for="nom" class="form-label">Nom</label>
+                                <div class="mb-3 ">
+                                    <label for="nom" class="form-label ">Nom</label>
+<<<<<<< HEAD
                                     <input type="text" name="nom" class="form-control" id="nom" placeholder="Nom">
+=======
+                                    <input type="text" name="nom" class="form-control" id="nom" placeholder="<?= $coffeeObject->getNom()?>">
+>>>>>>> 8b403d1a56c11ed43f17cb5956e1a78c046b6a88
                                 </div>
 
                                 <div class="mb-3">
@@ -47,6 +49,7 @@
                                     
                                     
                                 </div>
+
                                 <div class="mb-3">
                                     <label for="pays" class="form-label">Pays</label>
                                     <select class=form-control name="pays" id="pays" >
@@ -72,12 +75,12 @@
 
                                 <div class="mb-3">
                                     <label for="prix" class="form-label">Prix</label>
-                                    <input type="text" name="prix" class="form-control" id="prix" placeholder="Prix">
+                                    <input type="text" name="prix" class="form-control" id="prix" placeholder="<?= $coffeeObject->getPrix()?>">
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="profil_aromatique" class="form-label">Profil aromatique</label>
-                                    <textarea class="form-control" name="profil_aromatique" id="profil_aromatique" rows="3"></textarea>
+                                    <textarea class="form-control" name="profil_aromatique" id="profil_aromatique" rows="3"><?= $coffeeObject->getProfil_aromatique()?></textarea>
                                 </div>
 
                                 <button class="btn btn-light">Envoyer</button>
@@ -85,16 +88,15 @@
                                 </form>
                             </div>
                         </div>
-                    </div>        
+                    </div>
                 </div>
-                
+
             </section>
         </main>
 
 </body>
 
-<footer>
-    <?php require_once 'layouts/footer.php';?>
-</footer>
+<?php require_once 'layouts/footer.php'; ?>
+
 
 </html>
