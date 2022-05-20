@@ -20,19 +20,13 @@ class CoffeController
     }
 
     // Insertion d'un café avec condition pour le type du café 'arabica ou robusta'
-<<<<<<< HEAD
-=======
 
->>>>>>> a37bb3ab2df7a63eb0c07c63256849c455f575ec
     public function add(){
     
 
 
         if (!empty($_POST)) {
-<<<<<<< HEAD
-=======
 
->>>>>>> a37bb3ab2df7a63eb0c07c63256849c455f575ec
 
 
             $uploadService = new UploadService;
@@ -56,25 +50,19 @@ class CoffeController
                 $success = $coffeRepository->add($entity);
 
             }
-<<<<<<< HEAD
-=======
 
->>>>>>> a37bb3ab2df7a63eb0c07c63256849c455f575ec
         }
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a37bb3ab2df7a63eb0c07c63256849c455f575ec
         require_once __DIR__ . '../../../templates/forms.php';
+    
+
+    
+
+       
     }
-
-    
-
-        
-    
 //---------------------------------CAFES ROBUSTA----------------------------------------------------
 
 
