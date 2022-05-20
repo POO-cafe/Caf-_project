@@ -15,11 +15,7 @@
 <?php require_once 'layouts/header.php';?>
 </header>
     <main class="m-2">
-<<<<<<< HEAD
-        <div class="row w-75 m-auto">
-=======
         <div class="row w-75 m-auto ">
->>>>>>> f3dcb92a2ab721511015b3c61742eee5795f19d2
 
             <!---photo + lien + titre--->
             <!---boucle img titre  contenu *6--->
