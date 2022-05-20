@@ -39,9 +39,9 @@
             <?php endforeach;?>
         </div>
     </main>
-    <footer>
+   
         <?php require_once 'layouts/footer.php';?>
-    </footer> 
+    
 </body>
 </html>
 
