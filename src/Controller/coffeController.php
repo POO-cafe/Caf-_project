@@ -2,6 +2,8 @@
 
 require_once __DIR__ . '../../Repository/CoffeRepository.php';
 require_once __DIR__ . '../../Entity/coffe.php';
+require_once __DIR__ . '../../Service/UpoloadService.php';
+
 
 
 // Selectionne tous les cafés
@@ -20,10 +22,13 @@ class CoffeController
     // Insertion d'un café avec condition pour le type du café 'arabica ou robusta'
     public function add()
     {
-        
 
+
+<<<<<<< HEAD
+=======
         if (!empty($_POST)) {
 
+>>>>>>> 78f66090bd49d36a2bab238325cd6f64d19d3c78
             $uploadService = new UploadService;
             $file = $uploadService->upload($_FILES['img']['name']);
             $entity = new Coffe();
@@ -44,13 +49,16 @@ class CoffeController
                 $coffeRepository = new CoffeRepository();
                 $success = $coffeRepository->add($entity);
 
+<<<<<<< HEAD
                 
                 
+=======
+>>>>>>> 78f66090bd49d36a2bab238325cd6f64d19d3c78
                 
             }
-            
+
         }
-        
+
         require_once __DIR__ . '../../../templates/forms.php';
     }
 
