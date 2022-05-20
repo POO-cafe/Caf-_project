@@ -21,7 +21,7 @@
 
    
 
-        <div class="container d-flex justify-content-around alignPictures align-items-center">
+        <div class="container d-flex justify-content-around alignPictures align-items-center textcolor">
             <div class="row">
                 <div class="col-5">
                     <img class="img-thumbnail rounded float-start " src="img_products/<?= $coffeeObject->getPhotos(); ?>" alt="">

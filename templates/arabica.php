@@ -27,7 +27,7 @@
                 $shortText = substr($chaine,0,100) . "..."; 
                 ?>
                 <div class="col-lg-4 col-md-12 mb-1 p-1">
-                    <div class="card shadow p-3 mb-5 bg-body rounded">
+                    <div class="card shadow p-3 mb-5 bg-body rounded arabic">
 
                             <a href="oneCoffee?id=<?= $arabica->getID()?>"><img class="zoomImgCard card-img-top" src="img_products/<?= $arabica->getPhotos(); ?>" alt="café"></a>
 

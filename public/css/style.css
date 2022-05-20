@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500&family=PT+Serif:wght@400;700&display=swap');
 
 :root {
   --creme: #F7F1F0;
@@ -11,7 +10,7 @@
 
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     margin: auto;
    
@@ -20,7 +19,12 @@
 
 
 body{
-  background-color: var(--creme);
+  background-color: var(--dark);
+}
+
+.foot{
+  color: var(--creme);
+  transition: 0.7s;
 }
 
 /*Page tout les cafés */
@@ -39,12 +43,13 @@ body{
 .titleSite {
   font-size: 2em;
   margin: 20px 50px;
+  transition: 0.7s;
 }
 .deplaceAllMenu{
   margin: 40px 80px;
 }
 .sizeTitleNav {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 .img_index
 {
@@ -149,3 +154,120 @@ h5
 }
 
 
+/* CSS HOVER */
+
+.hove {
+  transition: 0.3s ease;
+  background: #3fa46b00;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  border-top: 2px solid #3fa46b00;
+  border-bottom: 2px solid #3fa46b00;
+  padding: 20px 0;
+  margin: 0 20px;
+  transition: 0.7s;
+}
+
+.hove:hover {
+  border-top: 2px solid var(--brown);
+  border-bottom: 2px solid var(--brown);
+  border-radius: 10px;
+  padding: 6px 0; 
+  transition: 0.7s;
+  color: goldenrod!important;
+}
+
+
+
+.titleSite:hover {
+
+  color: goldenrod;
+  font-size: 2em;
+  margin: 20px 50px;
+  transition: 0.7s;
+}
+
+#left {
+
+  
+    border-radius: 5%;
+    transition: 0.7s;
+
+
+}
+
+#left:hover{
+
+  color: #111; 
+  background: rgb(218, 165, 32); 
+  box-shadow: 0 0 100px rgba(218, 165, 32, 0.596);
+  transition: 0.7s;
+  opacity: 0.70;
+
+}
+
+
+#right {
+  border-radius: 5%;
+  transition: 0.7s;
+
+}
+
+#right:hover{
+
+color: #111; 
+  background: rgb(218, 165, 32); 
+  box-shadow: 0 0 100px rgba(218, 165, 32, 0.596);
+  opacity: 0.70;
+  transition: 0.7s;
+
+
+}
+
+.arabic{
+  transition: 0.7s;
+
+
+}
+
+.arabic:hover{
+
+  opacity: 0.90;
+  transition: 0.3s;
+  
+}
+
+.robust{
+  transition: 0.7s;
+
+
+}
+
+.robust:hover{
+
+  opacity: 0.90;
+  transition: 0.3s;
+  
+}
+
+.foot:hover{
+  color: var(--dark);
+  transition: 0.7s;
+}
+
+/*One Coffee*/
+
+
+/*Couleur du text*/
+.textcolor{
+
+  color: var(--creme);
+  text-align: center;
+  
+}
+
+.texte{
+  color: var(--creme);
+
+}
