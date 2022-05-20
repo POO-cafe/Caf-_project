@@ -20,10 +20,19 @@ class CoffeController
     }
 
     // Insertion d'un café avec condition pour le type du café 'arabica ou robusta'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8b403d1a56c11ed43f17cb5956e1a78c046b6a88
     public function add(){
     
 
+
         if (!empty($_POST)) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8b403d1a56c11ed43f17cb5956e1a78c046b6a88
 
 
             $uploadService = new UploadService;
@@ -47,6 +56,7 @@ class CoffeController
                 $success = $coffeRepository->add($entity);
 
             }
+<<<<<<< HEAD
 
 
 
@@ -55,10 +65,16 @@ class CoffeController
 
 
                 
+=======
+>>>>>>> 8b403d1a56c11ed43f17cb5956e1a78c046b6a88
         }
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8b403d1a56c11ed43f17cb5956e1a78c046b6a88
         require_once __DIR__ . '../../../templates/forms.php';
     }
 //---------------------------------CAFES ROBUSTA----------------------------------------------------
@@ -88,7 +104,6 @@ class CoffeController
         $id = $_GET["id"];
 
         if (!empty($_POST)) {
-
 
             $entity = new Coffe();
 
@@ -127,8 +142,11 @@ class CoffeController
     public function delete() {
 
         $coffeRepository = new CoffeRepository();
-        $deleteObject = $coffeRepository->remove($_GET['id']);
+       
+        $coffee = $coffeRepository->selectId($_GET['id']);
+        unlink("img_products/{$coffee->getPhotos()}");
         
+        $deleteObject = $coffeRepository->remove($_GET['id']);
         //Redirige l'utilisateur vers la route "/liste"
        header('Location: /');
     }

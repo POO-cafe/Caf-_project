@@ -32,7 +32,11 @@
 
                                 <div class="mb-3 ">
                                     <label for="nom" class="form-label ">Nom</label>
+<<<<<<< HEAD
                                     <input type="text" name="nom" class="form-control" id="nom" placeholder="Nom">
+=======
+                                    <input type="text" name="nom" class="form-control" id="nom" placeholder="<?= $coffeeObject->getNom()?>">
+>>>>>>> 8b403d1a56c11ed43f17cb5956e1a78c046b6a88
                                 </div>
 
                                 <div class="mb-3">
