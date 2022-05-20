@@ -32,7 +32,7 @@
 
                                 <div class="mb-3 ">
                                     <label for="nom" class="form-label ">Nom</label>
-                                    <input type="text" name="nom" class="form-control" id="nom" placeholder="Nom">
+                                    <input type="text" name="nom" class="form-control" id="nom" placeholder="<?= $coffeeObject->getNom()?>">
                                 </div>
 
                                 <div class="mb-3">
