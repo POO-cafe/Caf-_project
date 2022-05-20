@@ -89,14 +89,19 @@ class CoffeController
 
             // Insertion dans la BDD
 
+<<<<<<< HEAD
             $success = $coffeRepository->add($entity, $id);
+=======
+            $success = $coffeRepository->update($entity, $id);
+
+>>>>>>> 33f171c63c7054e196f2f01b8a385c5de1731275
             // Verifier que le champs soit vide ou pas sinon envoyer les données
 
         }
-            $coffeRepository->selectId($id);
+            $coffee= $coffeRepository->selectId($id);
 
 
-        require_once '../../../templates/edit.php';
+        require_once __DIR__.'../../../templates/edit.php';
     }
 
     //Selectionne d'un coffee
@@ -117,5 +122,7 @@ class CoffeController
         //Redirige l'utilisateur vers la route "/liste"
         var_dump($deleteObject);
     }
+
+
 
 }
