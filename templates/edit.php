@@ -28,40 +28,58 @@
                         <div class="row centered2 p-0">
                             <div class="col middleForm">
                                 <h3>Modification d'un café</h3>
-                                <form method="post" enctype="multipart/form-data">
+                                 <form action="" method="post" enctype="multipart/form-data">
 
-                                    <div class="mb-3">
-                                        <label for="nom" class="form-label"></label>
-                                        <input type="text" name="nom" class="form-control" id="nom" placeholder="<?php echo $coffee->getNom() ?>">
-                                    </div>
+                                <div class="mb-3">
+                                    <label for="nom" class="form-label">Nom</label>
+                                    <input type="text" name="nom" class="form-control" id="nom" placeholder="Nom">
+                                </div>
 
-                                    <div class="mb-3">
-                                        <label for="type" class="form-label"></label>
-                                        <input type="text" name="type" class="form-control" id="type" placeholder="<?php echo $coffee->getType() ?>">
-                                    </div>
+                                <div class="mb-3">
+                                    <label for="type" class="form-label">Type</label>
+                                    <select class=form-control name="type" id="type" >
+                                    <option value=un>Selectionnez la variétée de café</option>
+                                    <option value=arabica>arabica</option>
+                                    <option value=robusta>robusta</option>
+                                    </select>
+                                    
+                                    
+                                </div>
 
-                                    <div class="mb-3">
-                                        <label for="pays" class="form-label"></label>
-                                        <input type="text" name="pays" class="form-control" id="pays" placeholder="<?php echo $coffee->getPays() ?>">
-                                    </div>
+                                <div class="mb-3">
+                                    <label for="pays" class="form-label">Pays</label>
+                                    <select class=form-control name="pays" id="pays" >
+                                    <option value=a>Selectionnez l'origine du café</option>
+                                    <option value=Bresil>Bresil</option>
+                                    <option value=Burundi>Burundi</option>
+                                    <option value=Colombie>Colombie</option>
+                                    <option value=Costa_Rica>Costa Rica</option>
+                                    <option value=Ethiopie>Ethiopie</option>
+                                    <option value=Italie>Italie</option>
+                                    <option value=Nicaragua>Nicaragua</option>
+                                    <option value=Mexique>Mexique</option>
+                                    <option value=Perou>Perou</option>
+                                    <option value=Turquie>Turquie</option>
+                                    <option value=Espagne>Espagne</option>
+                                    </select>
+                                </div>
 
-                                    <div class="mb-3">
-                                        <label for="img" class="form-label"><?php echo $coffee->getPhotos() ?></label>
-                                        <input class="form-control" name="img" type="file" id="img">
-                                    </div>
+                                <div class="mb-3">
+                                    <label for="img" class="form-label">Photo</label>
+                                    <input class="form-control" name="img" type="file" id="img">
+                                </div>
 
-                                    <div class="mb-3">
-                                        <label for="prix" class="form-label"></label>
-                                        <input type="text" name="prix" class="form-control" id="prix" placeholder="<?php echo $coffee->getPrix() ?>">
-                                    </div>
+                                <div class="mb-3">
+                                    <label for="prix" class="form-label">Prix</label>
+                                    <input type="text" name="prix" class="form-control" id="prix" placeholder="Prix">
+                                </div>
 
-                                    <div class="mb-3">
-                                        <label for="profil_aromatique" class="form-label"></label>
-                                        <textarea class="form-control" name="profil_aromatique" id="profil_aromatique" rows="3"><?php echo $coffee->getProfil_aromatique() ?></textarea>
-                                    </div>
+                                <div class="mb-3">
+                                    <label for="profil_aromatique" class="form-label">Profil aromatique</label>
+                                    <textarea class="form-control" name="profil_aromatique" id="profil_aromatique" rows="3"></textarea>
+                                </div>
 
-                                    <button class="btn btn-seconday">Envoyer</button>
-                                   
+                                <button class="btn btn-seconday">Envoyer</button>
 
                                 </form>
                             </div>
