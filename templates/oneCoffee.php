@@ -21,12 +21,12 @@
 
    
 
-        <div class="container">
+        <div class="container d-flex justify-content-around alignPictures align-items-center">
             <div class="row">
                 <div class="col-5">
-                    <img src="img_products/<?= $coffeeObject->getPhotos(); ?>" alt="">
+                    <img class="img-thumbnail rounded float-start" src="img_products/<?= $coffeeObject->getPhotos(); ?>" alt="">
                 </div>
-                <div class="col-7">
+                <div class="col-5 ml-5 p-5">
                 <h2><?= $coffeeObject->getNom(); ?></h2>
                 <ul>
                     <li><p>Variété</p><?= $coffeeObject->getType(); ?></li>
@@ -41,8 +41,7 @@
         </div>
         
 
-    <footer>
+    
     <?php require_once 'layouts/footer.php';?>
-    </footer>
-
+    
 </html>
