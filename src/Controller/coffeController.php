@@ -20,7 +20,7 @@ class CoffeController
     // Insertion d'un café avec condition pour le type du café 'arabica ou robusta'
     public function add()
     {
-        
+
 
         if (!empty($_POST)) {
 
@@ -42,12 +42,9 @@ class CoffeController
                 // Insertion dans la BDD
                 $coffeRepository = new CoffeRepository();
                 $success = $coffeRepository->add($entity);
-                
-                
             }
-            
         }
-        
+
         require_once __DIR__ . '../../../templates/forms.php';
     }
 
