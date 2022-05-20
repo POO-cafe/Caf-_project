@@ -38,12 +38,6 @@
                     <a href="/delete?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark m-2">Supprimer</a>
                     <a href="/edit?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark m-2">Editer</a>
 
-                    <a href="/delete?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Supprimer</a>
-
-                    <a href="/update/avis?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Editer</a>
-
-                    <a href="/edit?id=<?= $coffeeObject->getId(); ?>" class="btn btn-dark">Editer</a>
-
                 </div>
             </div>
         </div>
