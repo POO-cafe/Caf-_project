@@ -15,9 +15,9 @@
 
 <body>
 
-    <hearder>
-<?php require_once 'layouts/header.php';?>
-</header>
+    <header>
+    <?php require_once 'layouts/header.php';?>
+    </header>
     <main>
       <div class="container">
           <div class="d-flex mt-5 justify-content-around">
