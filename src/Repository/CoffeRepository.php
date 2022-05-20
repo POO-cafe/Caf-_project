@@ -118,27 +118,7 @@ class CoffeRepository extends Database
         return $query->execute();
     }
 
-    public function edit(int $id)
-    {
-
-        $query = $this->getDb()->prepare('SELECT * FROM cafes WHERE id = :id');
-        $query->bindValue(':id', $id, PDO::PARAM_INT);
-        $query->execute();
-
-        $coffee = $query->fetch();
-
-        if ($coffee) {
-            $avisObject = (new Coffe())
-                ->setId($coffee['id'])
-                ->setNom($coffee['nom'])
-                ->setType($coffee['type'])
-                ->setPays($coffee['pays'])
-                ->setPhotos($coffee['photos'])
-                ->setPrix($coffee['prix'])
-                ->setProfil_aromatique($coffee['profil_aromatique']);
-        }
-        return $avisObject ?? false;
-    }
+    
     public function update(Coffe $coffee, int $id)
     {
 
