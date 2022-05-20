@@ -18,7 +18,7 @@
                 <a class="nav-link active" aria-current="page" href="/robusta">Robusta</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/add">Ajout d'un café</a>
+                <a class="nav-link active btn btn-dark text-white" aria-current="page" href="/add">+ Add.</a>
             </li>
 
         </ul>
