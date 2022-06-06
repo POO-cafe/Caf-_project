@@ -30,7 +30,7 @@ class CoffeController
 
 
             $uploadService = new UploadService;
-            $file = $uploadService->upload($_FILES['img']['name']);
+            $file = $uploadService->upload($_FILES['img']);
             $entity = new Coffe();
 
 
@@ -53,14 +53,7 @@ class CoffeController
 
         }
 
-
-
-
         require_once __DIR__ . '../../../templates/forms.php';
-    
-
-    
-
        
     }
 //---------------------------------CAFES ROBUSTA----------------------------------------------------
@@ -110,9 +103,9 @@ class CoffeController
 
 
             // Verifier que le champs soit vide ou pas sinon envoyer les données
-
+                
         }
-            $coffee= $coffeRepository->selectId($id);
+            $coffee = $coffeRepository->selectId($id);
 
 
         require_once __DIR__.'../../../templates/edit.php';

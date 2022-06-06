@@ -16,7 +16,7 @@
 
 <body>
 
-    <hearder>
+    <header>
         <?php require_once 'layouts/header.php'; ?>
         </header>
         <main>
@@ -28,15 +28,11 @@
                         <div class="row centered2 p-0 ">
                             <div class="col middleForm">
                                 <h3>Modification d'un café</h3>
-                                 <form action="" method="post" enctype="multipart/form-data">
+                                 <form method="post" enctype="multipart/form-data">
 
                                 <div class="mb-3 ">
                                     <label for="nom" class="form-label ">Nom</label>
-<<<<<<< HEAD
-                                    <input type="text" name="nom" class="form-control" id="nom" placeholder="Nom">
-=======
-                                    <input type="text" name="nom" class="form-control" id="nom" placeholder="<?= $coffeeObject->getNom()?>">
->>>>>>> 8b403d1a56c11ed43f17cb5956e1a78c046b6a88
+                                    <input type="text" name="nom" class="form-control" id="nom" placeholder="<?php $coffeeObject->getNom() ?>">
                                 </div>
 
                                 <div class="mb-3">

@@ -29,8 +29,7 @@
             </div>
             <h1 class="error text-center pt-4">ERROR 404</h1>
         </main>
-    
-</body>
+        
     <?php require_once 'layouts/footer.php'; ?>
-
+</body>
 </html>

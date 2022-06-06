@@ -15,7 +15,7 @@
 
 <body>
 
-    <hearder>
+    <header>
     <?php require_once 'layouts/header.php';?>
     </header>
 
@@ -26,7 +26,7 @@
                 <div class="col-5">
                     <img class="img-thumbnail rounded float-start " src="img_products/<?= $coffeeObject->getPhotos(); ?>" alt="">
                 </div>
-                <div class="col-5 ml-5 p-5">
+                <div class="col-5">
                 <h2 class="m-2 titleOneCoffee"><?= $coffeeObject->getNom(); ?></h2>
                 <ul class="p-0 m-2">
                     <li class="listOneCoffee">Variété : <?= $coffeeObject->getType(); ?></li>
@@ -45,5 +45,5 @@
 
     
     <?php require_once 'layouts/footer.php';?>
-    
+</body> 
 </html>

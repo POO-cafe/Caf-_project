@@ -105,7 +105,7 @@ class CoffeRepository extends Database
         $query->bindValue(':pays', $coffee->getPays());
         $query->bindValue(':photos', $coffee->getPhotos());
         $query->bindValue(':prix', $coffee->getPrix());
-        $query->bindValue('profil_aromatique', $coffee->getProfil_aromatique());
+        $query->bindValue(':profil_aromatique', $coffee->getProfil_aromatique());
 
         return $query->execute();
     }

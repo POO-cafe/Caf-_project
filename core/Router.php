@@ -14,7 +14,7 @@
          * on enregistre la position du pint d'interrogation si celui-ci existe
          */
         $position = strpos($uri,'?');
-        // si position est egal a false, alors on nettoie l'uri
+        // si position est egal à false, alors on nettoie l'uri
         if($position){
 
             $uri = substr($uri,0,$position);
@@ -42,5 +42,5 @@
 
     }
  }
-
+?>
 

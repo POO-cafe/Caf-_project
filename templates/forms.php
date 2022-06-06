@@ -16,7 +16,7 @@
 
 <body>
 
-        <hearder>
+        <header>
         <?php require_once 'layouts/header.php'; ?>
         </header>
         <main>
